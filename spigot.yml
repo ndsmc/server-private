@@ -1,0 +1,174 @@
+messages:
+  whitelist: Технические работы
+  unknown-command: Неизвестная команда, либо у вас нет прав.
+  server-full: Сервер полон!
+  outdated-client: Устаревший клиент! Пожалуйста, используйте {0}
+  outdated-server: Устаревший сервер! Я все еще на {0}
+  restart: Сервер перезагружается
+advancements:
+  disable-saving: false
+  disabled:
+  - minecraft:story/disabled
+settings:
+  timeout-time: 60
+  restart-on-crash: true
+  restart-script: ./start.sh
+  save-user-cache-on-stop-only: false
+  sample-count: 12
+  bungeecord: false
+  player-shuffle: 0
+  user-cache-size: 1000
+  moved-wrongly-threshold: 1.0
+  moved-too-quickly-multiplier: 200.0
+${mc-spigot-settings-netty-threads}
+  attribute:
+    maxHealth:
+      max: 2048.0
+    movementSpeed:
+      max: 2048.0
+    attackDamage:
+      max: 2048.0
+  log-villager-deaths: false
+  log-named-deaths: false
+${mc-spigot-settings-debug}
+world-settings:
+  default:
+    verbose: false
+    below-zero-generation-in-existing-chunks: true
+    view-distance: 16
+    simulation-distance: 8
+    thunder-chance: 100000
+    merge-radius:
+      item: 1.5
+      exp: 2.0
+    mob-spawn-range: 6
+    item-despawn-rate: 18000
+    arrow-despawn-rate: 1200
+    trident-despawn-rate: 1200
+    zombie-aggressive-towards-villager: true
+    nerf-spawner-mobs: false
+    enable-zombie-pigmen-portal-spawns: true
+    wither-spawn-sound-radius: 0
+    end-portal-sound-radius: 0
+    hanging-tick-frequency: 100
+    growth:
+      cactus-modifier: 100
+      cane-modifier: 100
+      melon-modifier: 100
+      mushroom-modifier: 100
+      pumpkin-modifier: 100
+      sapling-modifier: 100
+      beetroot-modifier: 100
+      carrot-modifier: 100
+      potato-modifier: 100
+      torchflower-modifier: 100
+      wheat-modifier: 100
+      netherwart-modifier: 100
+      vine-modifier: 100
+      cocoa-modifier: 100
+      bamboo-modifier: 100
+      sweetberry-modifier: 100
+      kelp-modifier: 100
+      twistingvines-modifier: 100
+      weepingvines-modifier: 100
+      cavevines-modifier: 100
+      glowberry-modifier: 100
+      pitcherplant-modifier: 100
+    entity-activation-range:
+      animals: 32
+      monsters: 32
+      raiders: 48
+      misc: 16
+      water: 16
+      villagers: 32
+      flying-monsters: 32
+      wake-up-inactive:
+        animals-max-per-tick: 4
+        animals-every: 1200
+        animals-for: 100
+        monsters-max-per-tick: 8
+        monsters-every: 400
+        monsters-for: 100
+        villagers-max-per-tick: 4
+        villagers-every: 600
+        villagers-for: 100
+        flying-monsters-max-per-tick: 8
+        flying-monsters-every: 200
+        flying-monsters-for: 100
+      villagers-work-immunity-after: 100
+      villagers-work-immunity-for: 20
+      villagers-active-for-panic: true
+      tick-inactive-villagers: false
+      ignore-spectators: false
+    entity-tracking-range:
+      players: 128
+      animals: 48
+      monsters: 48
+      misc: 32
+      display: 128
+      other: 64
+    ticks-per:
+      hopper-transfer: 8
+      hopper-check: 1
+    hopper-amount: 1
+    hopper-can-load-chunks: false
+    dragon-death-sound-radius: 0
+    hunger:
+      jump-walk-exhaustion: 0.05
+      jump-sprint-exhaustion: 0.2
+      combat-exhaustion: 0.1
+      regen-exhaustion: 6.0
+      swim-multiplier: 0.01
+      sprint-multiplier: 0.1
+      other-multiplier: 0.0
+    max-tnt-per-tick: 500
+    max-tick-time:
+      tile: 50
+      entity: 50
+${mc-spigot-world-settings-default-seed-village}
+${mc-spigot-world-settings-default-seed-desert}
+${mc-spigot-world-settings-default-seed-igloo}
+${mc-spigot-world-settings-default-seed-jungle}
+${mc-spigot-world-settings-default-seed-swamp}
+${mc-spigot-world-settings-default-seed-monument}
+${mc-spigot-world-settings-default-seed-shipwreck}
+${mc-spigot-world-settings-default-seed-ocean}
+${mc-spigot-world-settings-default-seed-outpost}
+${mc-spigot-world-settings-default-seed-endcity}
+${mc-spigot-world-settings-default-seed-slime}
+${mc-spigot-world-settings-default-seed-nether}
+${mc-spigot-world-settings-default-seed-mansion}
+${mc-spigot-world-settings-default-seed-fossil}
+${mc-spigot-world-settings-default-seed-portal}
+${mc-spigot-world-settings-default-seed-ancientcity}
+${mc-spigot-world-settings-default-seed-trailruins}
+${mc-spigot-world-settings-default-seed-trialchambers}
+${mc-spigot-world-settings-default-seed-buriedtreasure}
+${mc-spigot-world-settings-default-seed-mineshaft}
+${mc-spigot-world-settings-default-seed-stronghold}
+  world_nether:
+    view-distance: 8
+    simulation-distance: 6
+    mob-spawn-range: 6
+  world_the_end:
+    view-distance: 14
+    simulation-distance: 6
+    mob-spawn-range: 6
+commands:
+  tab-complete: 0
+  send-namespaced: true
+  log: true
+  spam-exclusions:
+  - /skill
+  silent-commandblock-console: false
+  replace-commands:
+  - setblock
+  - summon
+  - testforblock
+  - tellraw
+players:
+  disable-saving: false
+config-version: 12
+stats:
+  disable-saving: false
+  forced-stats: {}

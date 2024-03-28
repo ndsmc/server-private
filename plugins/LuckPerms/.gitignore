@@ -1,0 +1,6 @@
+libs
+translations
+editor-keystore.json
+contexts.json
+*.gz
+luckperms-h2-v2.mv.db

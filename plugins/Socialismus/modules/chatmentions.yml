@@ -1,0 +1,156 @@
+#
+# CHAT MENTION DOCUMENTATION
+#
+# What is Chat Mention?
+# It is a module that allows your players to mention other players in chat.
+# It is very simple and easy to use, just type '@' and the name of the player you want to
+# mention and the module will take care of the rest.
+#
+# Here you can create as many formats as you like.
+# formats: 
+#  Here you can specify if the format is enabled or not
+#  - enabled: true
+#
+#    Here you can specify permission to use this format, if the player does not have
+#    the required permission, the format will not be used.
+#    *You can leave it empty to disable permission check*
+#    permission: "privilege.3"
+#
+#    Format that will be used when the player mentions another player.
+#    Don't forget to close the tags, otherwise the text will not be displayed correctly.
+#    *You can use PlaceholderAPI placeholders and MiniMessage formatting*
+#    format: "<yellow><bold>@{playerName}</bold></yellow>"
+#
+#    Here you can specify how the hover when you put the mouse over the mentioned player
+#    hover-format: 
+#      - "Player {playerName} was mentioned!"
+#
+# Here you can specify how the mentioned player will be notified.
+# notifications:
+#   Here you can specify if the notification is enabled or not
+#   - enabled: true
+#
+#     Here you can specify permission to use this notification, if the player does not have
+#     the required permission, the notification will not be used.
+#     *You can leave it empty to disable permission check*
+#     permission: "privilege.3"
+#
+#     Here you can specify the types of notifications that will be used.
+#     Available types:
+#       - ACTION_BAR
+#       - BOSS_BAR
+#       - CHAT
+#       - SOUND
+#       - TITLE
+#     You can specify the order in which the notifications will be sent.
+#     types:
+#       - TITLE
+#       - SOUND
+#
+#     action-bar:
+#       Here you can specify the message that will be displayed in the action bar.
+#       message: "{mentionerName} mentioned you!"
+#
+#     boss-bar:
+#       Here you can specify the message that will be displayed in the boss bar.
+#       message: "{mentionerName} mentioned you!"
+#       Here you can specify the color. Available colors:
+#         - BLUE, GREEN, PINK, PURPLE, RED, WHITE, YELLOW
+#       color: RED
+#       Here you can specify the style. Available styles:
+#         - SOLID, SEGMENTED_6, SEGMENTED_10, SEGMENTED_12, SEGMENTED_20
+#       style: SOLID
+#       Here you can specify the duration how long the boss bar will be displayed.
+#       duration: 30
+#
+#     chat:
+#       Here you can specify the message that will be displayed in the chat.
+#       message: "{mentionerName} mentioned you!"
+#
+#     sound:
+#       Here you can specify the sound that will be played.
+#       sound: ENTITY_EXPERIENCE_ORB_PICKUP
+#       Here you can specify the volume of the sound.
+#       volume: 1.0
+#       Here you can specify the pitch of the sound.
+#       pitch: 1.0
+#
+#     title:
+#       Here you can specify the title that will be displayed.
+#       title: "{mentionerName} mentioned you!"
+#       Here you can specify the subtitle that will be displayed.
+#       subtitle: ""
+#       Here you can specify the fade in time in milliseconds.
+#       fadeIn: 10
+#       Here you can specify the stay time in milliseconds.
+#       stay: 30
+#       Here you can specify the fade out time in milliseconds.
+#       fadeOut: 10
+
+formats:
+  - enabled: true
+    permission: ""
+    format: "<aqua>@{playerName}</aqua>"
+    hover-format:
+      - " "
+      - "<dark_gray> Information</dark_gray>"
+      - "<white>  Player: <aqua>{playerName}</aqua>"
+      - " "
+notifications:
+  - enabled: true
+    permission: ""
+    types:
+      - SOUND
+    action-bar:
+      message: "{mentionerName} mentioned you in chat!"
+    boss-bar:
+      color: RED
+      style: PROGRESS
+      duration: 30
+      message: "You were mentioned!"
+    chat:
+      message: "{mentionerName} mentioned you in chat!"
+    sound:
+      sound: ENTITY_EXPERIENCE_ORB_PICKUP
+      volume: 1.0
+      pitch: 1.0
+    title:
+      title: "<gold><bold>You were mentioned!"
+      subtitle: "<dark_gray>{mentionerName} mentioned you in chat!"
+      fade-in: 120
+      stay: 1200
+      fade-out: 120
+settings:
+  self-mention-permission: "socialismus.chat.mention.self"
+
+  # Here you can specify a permission that will limit the amount of mentions a player can do.
+  # Example: socialismus.chat.mention.max.3 will limit the player to 3 mentions per message.
+  max-mention-permission: "socialismus.chat.mention.max."
+  all-tag-settings:
+
+    # Here you can specify the permission required to use the @all tag.
+    permission: "socialismus.chat.mention.all"
+
+    # Here you can specify the tags that will be used to mention all players.
+    tags:
+      - "@all"
+      - "@everyone"
+
+    # Here you can specify the format that will be used to tag everyone.
+    # You can use PlaceholderAPI placeholders, MiniMessage formatting and internal
+    # {usedTag} placeholder.
+    format: "<red>{usedTag}</red>"
+  nearby-tag-settings:
+
+    # Here you can specify the permission required to use the tag.
+    permission: "socialismus.chat.mention.nearby"
+
+    # Here you can specify the tags that will be used to mention nearby players.
+    tags:
+      - "@nearby"
+      - "@near"
+
+    # Here you can specify the format that will be used to tag nearby players.
+    # You can use PlaceholderAPI placeholders, MiniMessage formatting and internal
+    # {usedTag} placeholder.
+    format: "<yellow>{usedTag}</yellow>"

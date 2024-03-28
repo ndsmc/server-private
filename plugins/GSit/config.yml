@@ -1,0 +1,57 @@
+Lang:
+  lang: ru_ru
+  client-lang: true
+Options:
+  ${mc-plugins-gsit-config-options-check-for-update}
+  get-up-damage: false
+  get-up-sneak: true
+  get-up-return: false
+  get-up-break: true
+  allow-unsafe: false
+  same-block-rest: false
+  center-block: true
+  Sit:
+    SitMaterials:
+    - '#stairs'
+    - '#slabs'
+    - '#carpets'
+    - '#wool_carpets'
+    - moss_carpet
+    - big_dripleaf
+    - snow
+    bottom-part-only: true
+    empty-hand-only: true
+    max-distance: 3.15
+    sit-message: false
+    default-sit-mode: true
+  PlayerSit:
+    allow-sit: false
+    allow-sit-npc: false
+    max-stack: 0
+    sneak-ejects: true
+    bottom-return: false
+    empty-hand-only: true
+    max-distance: 0.0
+    sit-message: true
+    default-sit-mode: true
+  Pose:
+    pose-message: false
+    interact: false
+    lay-rest: true
+    lay-snoring-sounds: false
+    lay-snoring-night-only: true
+    lay-night-skip: true
+  Crawl:
+    get-up-sneak: true
+    double-sneak: false
+  trusted-region-only: false
+  WorldBlacklist:
+  - blocked_world
+  WorldWhitelist: []
+  MaterialBlacklist:
+  - lava
+  CommandBlacklist:
+  - skin
+  - nick
+  enhanced-compatibility: false
+  FeatureFlags: []

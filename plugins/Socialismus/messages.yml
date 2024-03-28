@@ -1,0 +1,48 @@
+chat:
+  # Set 'no-online-players: null' to disable the message
+  no-online-players: null
+  # Set 'no-nearby-players: null' to disable the message
+  no-nearby-players: null
+  insufficient-players: " <dark_gray>| <white>На сервере должно быть как минимум {minOnline} игроков, чтобы отправить сообщение в этот чат."
+  no-use-permission: " <dark_gray>| <white>У вас нет разрешения на <red>отправку<white> сообщения."
+  too-small-message: " <dark_gray>| <white>Ваше сообщение слишком короткое, чтобы быть отправленным."
+  forbidden-world: " <dark_gray>| <white>Вы не можете чатить в этом мире."
+swapper:
+  no-use-permission: " <dark_gray>| <white>У вас <red>нет разрешения <white>использовать этот swapper."
+bubblechat:
+  # Set 'noSendPermission: null' to disable the message
+  no-use-permission: " <dark_gray>| <white>У вас нет разрешения на <red>отправку<white> сообщения в пузырьке."
+  too-small-message: " <dark_gray>| <white>Ваше сообщение слишком короткое, чтобы быть отправленным."
+  forbidden-world: " <dark_gray>| <white>Вы не можете использовать пузырьки в этом мире."
+commands:
+  only-for-player: " <dark_gray>| <white>Эта команда может быть использована только игроками."
+  wrong-syntax: " <dark_gray>| <white>Вы использовали команду <red>неправильно."
+  unknown-command: " <dark_gray>| <white>Вы использовали команду, которой <red>не существует."
+  error-occurred: "Произошла ошибка при выполнении команды."
+  missing-argument: " <dark_gray>| <white>Вы не указали <red>необходимый аргумент <white>для выполнения команды."
+  player-not-found: " <dark_gray>| <white>Игрок не найден, потому что он оффлайн или не существует."
+  same-player: " <dark_gray>| <white>Вы не можете использовать этого игрока в данном сценарии."
+  main-command:
+    description: "Команда помощи"
+    command-format: "  <yellow>{command}<gray>{subCommand} <dark_gray>- <white>{description}"
+    help-format:
+      - " "
+      - " <green><bold>Помощь по командам <reset><gray>[Список команд]"
+      - "{commands}"
+      - " "
+  reload-command:
+    description: "Перезагрузка конфигурации плагина"
+    reloaded-successfully: "<dark_gray>| <white>Конфигурация успешно перезагружена."
+  announce-command:
+    description: "Объявляет сообщение на сервере"
+    no-announcement: "<dark_gray>| <white>С объявлением с таким id не найдено."
+    announce: "<dark_gray>| <white>Объявление..."
+  private-message-command:
+    description: "Отправить игроку личное сообщение"
+    format: "{senderName} -> {recipientName}: {message}"
+  bubble-command:
+    description: "Отправить сообщение в пузырьке."
+    success: " <dark_gray>| <white>Вы отправили сообщение в пузырьке."
+  reply-command:
+    description: "Ответить на последнее личное сообщение"
+    no-recipient: "<dark_gray>| <white>У вас нет кому ответить."

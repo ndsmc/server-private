@@ -1,0 +1,126 @@
+#
+# CHATS DOCUMENTATION:
+#
+# Here you can create as many Chats as you like.
+# chats:
+#   Here you can specify a chat id, it should be unique and not used in any other chat.
+#   - id: "example"
+#
+#     Here you can specify how you want to use the chat.
+#     usage:
+#       In type you need to specify the method that will be used to trigger the chat.
+#       Possible values:
+#         - SYMBOL (using a symbol in the chat)
+#         - COMMAND (using a command)
+#         - SYMBOL_COMMAND (combining these 2 options)
+#       type: SYMBOL_COMMAND
+#       symbol: "!"
+#       command: "example"
+#
+#     Here you can specify the message format.
+#     formats:
+#       Format allows you to specify the design of the final message that will be shown
+#       to the players. You can use PlaceholderAPI placeholders, MiniMessage formatting and
+#       internal {playerName}/{message} placeholders.
+#       format: "<red>{playerName}: <white>{message}"
+#       This option allows you to specify the permission that the player must have to use this
+#       format.
+#       permission: "whereareiam.is.the.best"
+#
+#     In this list, you can specify what and how to show players when they hover their mouse
+#     over the message format. You can use PlaceholderAPI placeholders and MiniMessage formatting
+#     hover-format:
+#       - "<green>Oh look at that!"
+#       - "<red>Oh look at that!"
+#
+#     Here you can specify the requirements for using this chat.
+#     requirements:
+#       This option allows you to disable requirements check, it is advised to think about if you
+#       need the requirements or not, because if you disable the performance will be much better.
+#       enabled: true
+#       sender:
+#         This option allows you to specify the minimum online players required to use this chat.
+#         min-online: 0
+#         Here you can set a number of symbols that players must write to be able to send this
+#         message in this chat.
+#         symbol-count-threshold: 0
+#         Here you can specify the permission that the player must have to use this chat.
+#         use-permission: "i.love.whereareiam"
+#         Here you can specify the worlds in which the player can use this chat.
+#         worlds:
+#           - "world"
+#           - "world_nether"
+#           - "world_the_end"
+#
+#       recipient:
+#         This option allows you to specify the radius in which the player will see the message.
+#         radius: -1
+#         This option allows you to specify whether the player will see his own message.
+#         see-own-message: true
+#         This option allows you to specify the permission that the player must have to see this
+#         see-permission: "whereareiam.is.the.best"
+#         Here you can specify the worlds in which the player can see this chat.
+#         worlds:
+#           - "world"
+#           - "world_nether"
+#           - "world_the_end"
+
+chats:
+  - id: "global"
+    usage:
+      type: SYMBOL
+      symbol: "!"
+      command: "global"
+    formats:
+      - format: "<gold><bold><globalChat>G</globalChat></bold></gold><dark_gray><globalChat> | </globalChat><gray><click:SUGGEST_COMMAND:/w ><playerInformation>{playerName}</playerInformation></click>: <white><messageInformation>{message}</messageInformation>"
+        permission: ""
+        sound: null
+    enable-swapper: true
+    mentions:
+      enabled: true
+      mention-self: false
+      mention-all: false
+      mention-nearby: false
+      max-mentions: 5
+      radius: -1
+    requirements:
+      enabled: false
+      sender:
+        min-online: 0
+        symbol-count-threshold: 0
+        use-permission: ""
+        worlds: []
+      recipient:
+        radius: -1
+        see-own-message: true
+        see-permission: ""
+        worlds: []
+  - id: "local"
+    usage:
+      type: SYMBOL
+      symbol: ""
+      command: "local"
+    formats:
+      - format: "<dark_gray><localChat>| </localChat><gray><click:SUGGEST_COMMAND:/w ><playerInformation>{playerName}</playerInformation></click>: <white><messageInformation>{message}</messageInformation>"
+        permission: ""
+        sound: null
+    enable-swapper: true
+    mentions:
+      enabled: true
+      mention-self: false
+      mention-all: false
+      mention-nearby: false
+      max-mentions: 5
+      radius: 128
+    requirements:
+      enabled: true
+      sender:
+        min-online: 0
+        symbol-count-threshold: 0
+        use-permission: ""
+        worlds: []
+      recipient:
+        radius: 128
+        see-own-message: true
+        see-permission: ""
+        worlds: []

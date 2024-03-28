@@ -1,0 +1,21 @@
+config-version: 0
+settings:
+    debug-mode: false
+world-settings:
+    default:
+        enabled: true
+        update-interval: 5
+        controls:
+            enabled: true
+            hidden-by-default: false
+        marker:
+            tooltip: <center>{name}</center>
+        layer:
+            label: Баннеры
+            controls:
+                enabled: true
+                hide-by-default: false
+            priority: 999
+            z-index: 999
+        icon:
+            size: 16

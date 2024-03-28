@@ -1,0 +1,5 @@
+{
+  ${mc-minecraft-sentry-reporter-sentry-dsn}
+  ${mc-minecraft-sentry-reporter-sentry-production}
+  server-name: private
+}

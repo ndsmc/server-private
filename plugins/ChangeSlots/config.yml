@@ -1,0 +1,14 @@
+Success: "&6Теперь максимальное количество игроков &c%n."
+
+NoNumber: "&cПожалуйста, укажите правильное число."
+
+Error: "&cПроизошла ошибка при изменении максимального количества игроков"
+
+NoPermission: "&cУ вас нет прав на использование этой команды"
+
+# If true, the server.properties (on Bukkit/Spigot) or the config.yml (on Bungee) will be update
+# And the new slots will be keep after the restart
+SaveOnRestart: false
+
+# BungeeCord only: Does the plugin display real max players when you ping the server on server list?
+UpdateServerPing: true

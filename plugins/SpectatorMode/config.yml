@@ -1,0 +1,55 @@
+enabled: true
+night-vision: true
+conduit: true
+teleport-back: false
+enforce-worlds: false
+worlds-allowed:
+- world
+- world_nether
+- world_the_end
+enforce-y: false
+y-level: 0.0
+disallow-non-transparent-blocks: false
+disallow-all-blocks: false
+disallowed-blocks: []
+bubble-size: 35
+enforce-distance: false
+distance: 64
+minimum-health: 0
+prevent-teleport: false
+bad-commands: []
+stand-still-ticks: 0
+enforce-world-border: true
+disable-switching-message: false
+silence-survival-mode-message-on-join: true
+closest-hostile: 0
+detach-leads: true
+mobs: true
+watch-gamemode: true
+prevent-falling: true
+only-spectating-no-free-movement: false
+spectator-ticks: -1
+switch-back-to: survival
+spectator-mode-message: '&9Установлен игровой режим на &b&lРежим наблюдателя'
+survival-mode-message: '&9Установлен игровой режим на &b&lРежим выживания'
+falling-message: '&cЭй, ты &lне можешь &r&cэто делать во время падения!'
+world-message: '&cЭй, ты не можешь &r&cсделать это в этом мире!'
+health-message: '&cВаше здоровье ниже минимально допустимого для выполнения этой команды!'
+disabled-message: '&cРежим наблюдателя &lне &r&cвключен на сервере!'
+disable-message: '&dРежим наблюдателя &lвыключен'
+enable-message: '&dРежим наблюдателя &lвключен'
+reload-message: '&bФайл конфигурации перезагружен!'
+invalid-player-message: '&cЭто недопустимый игрок'
+force-success: '&bУспешно принудительно выполнена команда /target/'
+no-spectator-message: '&cВы не использовали команду /s'
+bad-command-message: '&cВы не можете выполнить эту команду в режиме наблюдателя'
+not-in-state-message: '&cВы не использовали эту команду для входа в режим наблюдателя!'
+mob-too-close-message: '&cВы слишком близко к враждебному мобу, чтобы войти в режим
+  наблюдателя'
+unallowed-teleport-message: '&cВам не разрешено телепортироваться в режиме наблюдателя'
+y-level-limit-message: '&cВы находитесь ниже допустимого уровня Y'
+stand-still-message: '&bСтойте неподвижно, чтобы перейти в режим наблюдателя!'
+moved-message: '&cВы двигались! Режим наблюдателя отменен'
+times-up-message: '&cИстекло время! Переключение режима на &b&lРежим выживания'
+spec-cancel-message: '&cРежим наблюдателя отменен'
+${mc-plugins-spectatormode-config-debug}

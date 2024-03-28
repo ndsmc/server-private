@@ -1,0 +1,7 @@
+*.tar.gz
+.cache
+cache
+libraries
+versions
+bluemap
+plugins/squaremap/web/tiles

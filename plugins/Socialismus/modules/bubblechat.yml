@@ -1,0 +1,102 @@
+# Settings section allows you to customise how the TextDisplay entity behaves.
+settings:
+
+  # Trigger type specifies the way the bubble message is triggered.
+  # Available values: CHAT, COMMAND, CHAT_COMMAND
+  trigger-type: CHAT
+
+  # Alignment type specifies to which border side the message will be floated.
+  # Available values: LEFT, RIGHT and CENTER.
+  alignment-type: CENTER
+  # Display type is the way the bubble with the message follows the player's gaze.
+  # Available values: FIXED, VERTICAL, HORIZONTAL and CENTER.
+  display-type: VERTICAL
+  #  Enable swapper allows you to enable or disable the swapper.
+  enable-swapper: true
+  # The See Through option controls how the bubble will behave behind a structure.
+  #
+  # Available values:
+  # true - you will see the bubble behind a block (Armor stand behaviour)
+  # false - false - you will not see the bubble behind a block.
+  see-through: false
+  # The line width options allow you to specify the width of a single line.
+  # 100 corresponds to 16 symbols per line.
+  line-width: 100
+  # Line Count allows you to limit the number of lines to display.
+  # You can write a number from 1 to infinite here
+  line-count: 5
+  # This setting represents the distance between a bubble message and the player's head.
+  # You can set a value from 0 to infinite.
+  head-distance: 1
+  # This setting allows you to adjust how much time is given to read a single symbol, resulting
+  # in the main display time being calculated for the entire bubble message.
+  #
+  # Example:
+  #  "I love bananas!" - has 13 symbols, so we multiply 13 by 0.1 and we get 1.3 seconds
+  #  to display this message.
+  time-per-symbol: 0.1
+  # This setting controls a part of the behaviour of the previous one. Here you can set the
+  # minimum time a player has to read a message. For example, if we have calculated 1.3
+  # seconds, it would not be used, instead the 2 seconds from this option would be used.
+  minimum-time: 1.5
+  # Display scale allows you to adjust the scale of the bubble.
+  display-scale:
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  # This setting allows you to set the maximum number of mentions in a single message.
+  max-mentions: 5
+  # The sound option allows you to specify the sound that will be played when a bubble message is displayed.
+  sound:
+    sender-sound: null
+    sender-sound-volume: 1
+    sender-sound-pitch: 1
+    receiver-sound: null
+    receiver-sound-volume: 1
+    receiver-sound-pitch: 1
+
+# Format section allows you to change the design as it would be displayed.
+format:
+
+  # The Start Message Format allows you to customise how the start message is displayed.
+  # You can use PlaceholderAPI placeholders, MiniMessage formatting and internal
+  # {playerName}/{message} placeholders.
+  start-message-format: "<gold><bold>🔔 <reset><white>{message}"
+  # This option is similar to the previous one, but is used for starting messages in the queue.
+  # You can use PlaceholderAPI placeholders, MiniMessage formatting and internal
+  # {playerName}/{message} placeholders.
+  queue-message-format: "<white>...{message}"
+  # If a message doesn't fit into a single bubble, it will be cut off and printed in the next
+  # bubble. Here you can adjust how the cut is displayed.
+  # You can use PlaceholderAPI placeholders and MiniMessage formatting.
+  cut-message-format: "<white>..."
+  # At the end of a single bubble or queue, you can add a message to the end.
+  # You can use PlaceholderAPI placeholders and MiniMessage formatting.
+  end-message-format: "<white>."
+  # This option allows you to specify the color of the background. Doesn't work
+  # if opacity is set to 0. You must use the RGB format.
+  background-color: "#000000"
+  # Adjust the opacity of your background colour or turn off the background.
+  # Values from 0 to 255 are available. (Set 0 to disable)
+  background-opacity: 40
+  # This option allows you to add a beautiful shadow to your text.
+  # If set to true, it will be displayed.
+  text-shadow: false
+
+# In the Requirement section, you can specify what your players need in order
+# to be able to send or receive a bubble message.
+requirements:
+  enabled: true
+  sender:
+    use-permission: "socialismus.bubblechat.use"
+    # This requirement allows you to specify how many symbols are required to
+    # display a bubble message. If the condition is not met, the bubble message
+    # will not be displayed.
+    symbol-count-threshold: 5
+    worlds:
+      - "world"
+      - "world_nether"
+      - "world_the_end"
+  recipient:
+    see-permission: null
+    see-own-bubble: true

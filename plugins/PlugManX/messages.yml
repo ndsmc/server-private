@@ -1,0 +1,95 @@
+###
+# Custom Messaging File.
+#
+# Messaging can include any of the formatting codes found on http://minecraft.gamepedia.com/Formatting_codes and must use the '&' character to denote them.
+# Make sure to include the single quotes around the custom messages.
+# With new updates, this is subject to change and previous versions might not display information properly. Changes will be noted in the changelog.
+###
+
+prefix: '&7[&aPlugMan&7] '
+check:
+  header: '&9Получение версий плагинов...'
+  not-found: '&9Плагин не установлен - последняя доступная версия: "{0}".'
+  not-found-spigot: '&cНе удалось получить данные о плагине - существует ли плагин как ресурс Spigot?'
+  out-of-date: '&cТекущая версия (&4{0}&c) не соответствует последней версии (&2{1}&c).'
+  out-of-date-player: '&cМожет быть устаревшим (Установлено -> Последняя): {0}'
+  up-to-date: '&9Плагин, кажется, обновлен до версии "{0}".'
+  up-to-date-player: '&aПлагин, кажется, обновлен (Установлено): {0}'
+  file-done: '&9Завершено сохранение файла: {0}'
+  unknown: '&cИнформация о версии неизвестна.'
+  unknown-player: '&cНеизвестно (Установлено): {0}'
+  not-available: '&cИнформация о версии для {0} недоступна.'
+disable:
+  all: '&9Все плагины отключены (за исключением PlugMan).'
+  already-disabled: '&c{0} уже отключен.'
+  disabled: '&9{0} отключен.'
+dump:
+  dumped: '&9Плагины сохранены в {0}.'
+  error: '&4Не удалось сохранить в файл.'
+enable:
+  all: '&9Все плагины включены.'
+  already-enabled: '&c{0} уже включен.'
+  enabled: '&9{0} включен.'
+error:
+  ignored: '&cНастройки PlugMan настроены на игнорирование этого плагина.'
+  invalid-plugin: '&cЭто не является допустимым плагином.'
+  no-permission: '&cУ вас нет разрешения на выполнение этой операции.'
+  specify-plugin: '&cВы должны указать плагин.'
+  specify-command: '&cВы должны указать команду.'
+  paper-plugin: '&cПлагины для Paper в настоящее время не поддерживаются, извините.'
+  usage:
+    command: '&7- &9Команда: &7{0}'
+    description: '&7- &9Описание: &7{0}'
+    usage: '&7- &9Использование: &7{0}'
+help:
+  header: '&7--------------------- [&a PlugMan &7] ---------------------'
+  help: '&7- &a/plugman help &f- &7Показать это сообщение.'
+  list: '&7- &a/plugman list [-v] &f- &7Список всех плагинов (-v показывает версии).'
+  dump: '&7- &a/plugman dump &f- &7Сохранить имена и версии плагинов в файл.'
+  info: '&7- &a/plugman info <plugin> &f- &7Получить информацию о плагине.'
+  usage: '&7- &a/plugman usage <plugin> &f- &7Показать команды, зарегистрированные плагином.'
+  lookup: '&7- &a/plugman lookup <command> &f- &7Найти плагин, к которому зарегистрирована команда.'
+  enable: '&7- &a/plugman enable <plugin|all> &f- &7Включить плагин.'
+  disable: '&7- &a/plugman disable <plugin|all> &f- &7Отключить плагин.'
+  restart: '&7- &a/plugman restart <plugin|all> &f- &7Перезапустить плагин.'
+  load: '&7- &a/plugman load <plugin> &f- &7Загрузить плагин.'
+  download: '&7- &a/plugman download <direct|spigot> <ID|URL> &f- &7Скачать и загрузить плагин.'
+  reload: '&7- &a/plugman reload <plugin|all> &f- &7Перезагрузить плагин.'
+  unload: '&7- &a/plugman unload <plugin> &f- &7Выгрузить плагин.'
+  check: '&7- &a/plugman check <plugin|all> [-f] &f- &7Проверить, обновлен ли плагин (-f сохраняет в файл для всех).'
+info:
+  header: 'Информация о плагине: {0}'
+  version: '&7- Версия: &a{0}'
+  authors: '&7- Автор(ы): &a{0}'
+  status: '&7- Состояние: {0}'
+  depends: '&7- Зависимости: {0}'
+  softdepends: '&7- Мягкие зависимости: &a{0}'
+list:
+  list: '&9Плагины ({0}): {1}'
+load:
+  already-loaded: '&c{0} уже загружен.'
+  cannot-find: '&cНе удалось найти файл и не удалось проверить описания.'
+  invalid-description: '&cУ плагина недопустимое описание.'
+  invalid-plugin: '&cЭтот файл не является допустимым плагином.'
+  loaded: '&9{0} был загружен и включен.'
+  plugin-dir: '&cКаталог плагинов не найден.'
+download:
+  invalid-id: '&cID плагина должен быть числом.'
+  invalid-type: '&cТип плагина должен быть либо "direct", либо "spigot".'
+  invalid-url: '&cВы должны указать допустимый URL, начинающийся с http:// или https://.'
+  malformed-url: '&cУказанный URL имеет неправильный формат.'
+  download-failed: '&cНе удалось скачать. Проверьте консоль для получения дополнительной информации.'
+lookup:
+  found: '&9/{0} зарегистрирован в {1}.'
+  not-found: '&cКоманда "/{0}" не зарегистрирована в файле plugin.yml ни в одном плагине.'
+reload:
+  all: '&9Все плагины были перезагружены.'
+  reloaded: '&9{0} был перезагружен.'
+restart:
+  all: '&9Все плагины были перезапущены.'
+  restarted: '&9{0} был перезапущен.'
+unload:
+  failed: '&cНе удалось выгрузить {0}.'
+  unloaded: '&9{0} был выгружен.'
+usage:
+  usage: '&9Команды: &7{0}'

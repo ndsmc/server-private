@@ -1,0 +1,65 @@
+#
+# Thank you for using ShortCut!
+# Make sure you have the most upto date version from modrinth:
+# https://modrinth.com/mod/shortcut
+#
+# Placeholders are supported!
+#
+# Stuck? Checkout the configuration guide at:
+# https://git.bb1.fun/Spigot/ShortCut
+#
+
+shortcuts:
+  executions:
+    - { display: Set up your own shortcuts by editing the config! }
+
+# This is the command name/label that you will type ingame (think /command_name)
+command_name:
+  # An OPTIONAL permission to use, this can be anything
+  # If the sender doesn't have this permission they cannot run this shortcut
+  permision: example.permission
+  # If the command can only be executed by players (this is also optional)
+  # For none players the execution method returns instantly
+  playerOnly: false
+  # An OPTIONAL way to describe how the command should be used
+  usage: '/command_name <value>'
+  # What is actually used to control what the shortcut does
+  executions:
+    - {
+        # This is the command to run
+        # %%0 is replaced with the first argument provided, %%1 is the second and so on
+        # Placeholders can be used if you so choose
+        run: say %%0,
+        # Who to run the command as
+        # Must be either "sender" OR "console"
+        as: sender,
+      }
+    - {
+        # This is a message that is to be sent to the user
+        # Formatting and placeholders can be used here
+        display: Example message with §aFormatting!,
+      }
+
+pt:
+  permision: example.permission
+  playerOnly: false
+  executions:
+    - { run: stat play_one_minute me, as: sender }
+
+playtime:
+  permision: example.permission
+  playerOnly: false
+  executions:
+    - { run: stat play_one_minute me, as: sender }
+
+toppt:
+  permision: example.permission
+  playerOnly: false
+  executions:
+    - { run: stat play_one_minute top, as: sender }
+
+topplaytime:
+  permision: example.permission
+  playerOnly: false
+  executions:
+    - { run: stat play_one_minute top, as: sender }

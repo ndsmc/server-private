@@ -1,0 +1,49 @@
+source_line_weight = 10
+# The default volume. Volume is configured on the client side
+# and can be adjusted via the mod settings.
+default_source_line_volume = 0.5
+# Add enchantment glint to custom discs.
+add_glint_to_custom_discs = false
+
+[distance]
+# Distance if 'enable_beacon_like_distance_amplification' is set
+# to false.
+jukebox_distance = 65
+# With this option enabled you can build a beacon-like pyramid
+# under a jukebox to change the distance of the sound.
+enable_beacon_like_distance_amplification = false
+# The first element is the distance without any pyramid layers.
+# You can add as much layers as you want. Even more or less
+# than the vanilla beacon, but at least one layer is required.  
+beacon_like_distances = [12, 24, 32, 48, 64]
+
+[youtube]
+# You can specify an email and a password to a YouTube account.
+# This will help with age restricted content and rate limits.
+# 
+# Authorization via password can fail. You need to check the
+# console and see if you've been prompted to visit a specific
+# link and enter a unique code to complete the process.
+email = ""
+password = ""
+
+[http_source]
+# Only allow links from trusted sources. You can disable this if
+# the server IP is public and leaking it is not a problem.
+whitelist_enabled = true
+whitelist = ["dropbox.com", "dropboxusercontent.com"]
+
+[burnable_tag]
+# With this option you can only burn discs that have a special NBT
+# tag. You can use this to add a custom way of getting burnable
+# discs, like buying for in-game currency, or crafting.
+require_burnable_tag = false
+# Enable a recipe for burnable discs. It's a shapeless craft.
+# By default you need a disc + 4 diamonds to get a burnable disc.
+# You can configure recipe item and cost. 
+enable_default_recipe = false
+default_recipe_item = "minecraft:diamond"
+default_recipe_cost = 4
+# A lore that will be added to a burnable disc crafted with the
+# default recipe.
+default_recipe_lore = "Burnable"

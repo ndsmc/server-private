@@ -1,0 +1,25 @@
+# This value can be changed if you want to influence whether offline
+# players are displayed as command prompts for /inventory and /enderchest.
+# The base value is 'false' so that there are not too many players
+# displayed if a lot of people have already joined the server.
+# Possible values: 'true' or 'false'
+show_offline_players: true
+
+# The next two entries are part of the translation system. You can find
+# more information on the wiki: https://github.com/DailyCraft/AdvancedSpyInventory/wiki/Translation
+
+# This allows you to set the default language of the plugin, and therefore
+# choose the language in which messages will be displayed in the console.
+# If the language has not been translated, the one displayed will be English.
+# The default is 'en_us' (hence English). Possible values are any in-game locale
+# code you can find here (provided the language is available in the current
+# server version): https://minecraft.fandom.com/wiki/Language#Languages
+default_language: ru_ru
+
+# This allows you to change whether or not the displayed language is
+# the same as the language the player has selected in their game options.
+# If this value is set to false, the displayed language will be the
+# default language set above.
+# The default value is 'true'.
+# Possible values: 'true' or 'false'
+dynamic_language: true

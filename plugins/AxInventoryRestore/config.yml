@@ -1,0 +1,39 @@
+prefix: '&#00aaff&lAxInventoryRestore &7» '
+
+# how long should the plugin keep backups? (in days)
+# this will run at server start/stop and when usign /axir cleanup
+cleanup-after-days: 14
+
+# should there also be an all category that cointains all the backups of a player?
+enable-all-category: true
+
+# this setting is not reloadable, you have to restart the server
+# should the plugin make backups periodically?
+# do not set "minutes" to anything below 1
+automatic-backup:
+  enabled: true
+  minutes: 5
+
+# check out the discord.yml for more info
+${mc-plugins-axinventoryrestore-config-enable-discord-addon}
+
+database:
+  # h2, sqlite, mysql, postgresql
+  # for single server setups we recommend h2 because it's way faster than sqlite
+  ${mc-plugins-axinventoryrestore-config-database-type}
+  
+  # you only need to touch these when using mysql/postgresql
+  ${mc-plugins-axinventoryrestore-config-database-address}
+  ${mc-plugins-axinventoryrestore-config-database-port}
+  ${mc-plugins-axinventoryrestore-config-database-database}
+  ${mc-plugins-axinventoryrestore-config-database-username}
+  ${mc-plugins-axinventoryrestore-config-database-password}
+  pool:
+    maximum-pool-size: 10
+    minimum-idle: 10
+    maximum-lifetime: 1800000
+    keepalive-time: 0
+    connection-timeout: 5000
+
+# do not change this
+version: 3

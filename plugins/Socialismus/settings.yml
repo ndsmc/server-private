@@ -1,0 +1,57 @@
+# 0 - Standard information
+# 1 - Debug mode
+# 2 - Debug mode but with much more information
+${mc-plugins-socialismus-settings-global-log-level}
+# This option allows you to disable or enable the update checker, which checks
+# for updates every hour.
+${mc-plugins-socialismus-settings-global-update-checker}
+
+# In this section you can disable or enable the desired module.
+#  true - enabled
+#  false - disabled
+modules:
+
+  # The chat module changes the behaviour of the vanilla Minecraft chat and adds
+  # more formatting and customization, allowing you to create several different
+  # chat with different requirements and styles.
+  chats:
+    enabled: true
+    # Allows to disable the vanilla chat usage on Paper and its forks.
+    use-vanilla-chat: false
+  # Swapper module adds to your chat message shortcuts, emojis or anything you
+  # can imagine.
+  swapper:
+    enabled: true
+    # Suggests swappers in chat (only for swappers without regex).
+    # *Works only if ProtocolLib is installed*
+    suggest: true
+
+  # Bubble chat is a module that changes the way players chat with each other.
+  # It adds a bubble (hologram) with a message from the chat over the player's head.
+  # *Works only if ProtocolLib is installed*
+  bubblechat: true
+
+  # The announcer module allows you to create announcements that will be displayed
+  # on the server. You can create as many announcements as you want and set the
+  # time interval between them.
+  announcer: false
+
+  # The chat mention module allows you to mention a player in the chat by typing
+  # @playername. The player will receive a notification that he has been mentioned.
+  # *It is recommended to enable it for chat OR bubbles, not both*
+  chatmention:
+
+    # Enable for chats allows you to enable or disable whether the module should work
+    # in the chat.
+    enable-for-chats: true
+    # Enable for bubbles allows you to enable or disable whether the module should work
+    # in the bubbles.
+    enable-for-bubbles: true
+  tag-parser: true
+
+# In this section, you can switch the plugin's behavior mode, which
+# can impact its performance and usage of resources.
+#  true - enabled
+#  false - disabled
+performance:
+  caching: true

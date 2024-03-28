@@ -1,0 +1,24 @@
+#
+# ANNOUNCER DOCUMENTATION:
+#
+# Here you can create as many Announcers as you like.
+# announcers:
+#   - enabled: true
+#     Here you can specify how often the announcer will send an announcement.
+#     interval: 60
+#     Here you can specify how the announcer will select the messages.
+#     Possible values:
+#       - RANDOM (selects a random message)
+#       - SEQUENTIAL (selects the next message in the list)
+#     selection-type: SEQUENTIAL
+#     Here you can specify the announcement ID that the announcer will send.
+#     announcements:
+#       - "example0"
+#       - "example1"
+
+announcers:
+  - enabled: false
+    interval: 10
+    selection-type: SEQUENTIAL
+    announcements:
+      - "example"

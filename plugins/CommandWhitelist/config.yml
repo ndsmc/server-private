@@ -1,0 +1,63 @@
+
+# Messages use MiniMessage formatting (https://docs.adventure.kyori.net/minimessage/format)
+messages:
+  prefix: ''
+  command_denied: Неизвестная команда, либо у вас нет прав.
+  subcommand_denied: Вы не можете использовать эту подкоманду.
+  no_permission: <red>У вас нет прав на выполнение этого действия.
+  no_such_subcommand: <red>Нет подкоманды с таким именем.
+  config_reloaded: <yellow>Конфигурация перезагружена.
+  added_to_whitelist: <yellow>Команда <gold>%s <yellow>добавлена в белый список для
+    разрешения <gold>%s.
+  removed_from_whitelist: <yellow>Команда <gold>%s <yellow>удалена из белого списка
+    для разрешения <gold>%s.
+  group_doesnt_exist: <red>Группа не существует или произошла ошибка.
+
+# Do not enable if you don't have issues with aliased commands.
+# This requires server restart to take effect.
+use_protocollib: false
+groups:
+  superadminmode:
+    commands:
+    - tps
+    - version
+    - cw
+    - spark
+    - paper
+  admin:
+    commands:
+    - tps
+    - version
+    - axir
+  helper:
+    commands:
+    - s
+  helper-low:
+    commands:
+    - s
+  default:
+    commands:
+    - r
+    - reply
+    - w
+    - m
+    - unignore
+    - ignore
+    - ignorelist
+    - co
+    - me
+    - try
+    - do
+    - sit
+    - lay
+    - crawl
+    - spit
+    - stat
+    - statshare
+    - pt
+    - playtime
+    - toppt
+    - topplaytime
+    - vreconnect
+    - vlist
+    - worldstats

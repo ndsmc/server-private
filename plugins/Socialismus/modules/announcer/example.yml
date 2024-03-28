@@ -1,0 +1,59 @@
+#
+# ANNOUNCEMENT DOCUMENTATION:
+#
+# Here you can create as many Announcements as you like.
+# announcements:
+#   Here you can specify an announcement id, it should be unique and not used in any other announcement.
+#   - id: "example"
+#     Here you can specify if the announcement is enabled or not.
+#     enabled: true
+#     Here you can specify the message that will be sent to the players.
+#     message:
+#       - "<red>Example Announcement"
+#       - "<green>Example Announcement"
+#     Here you can specify the settings for the announcement.
+#     settings:
+#       This option allows you to specify the delay between sending messages.
+#       delay: 0
+#       This option allows you to specify if the announcement will be sent repeatedly.
+#       repeat: true
+#       This option allows you to specify the worlds in which the announcement will be sent.
+#       worlds:
+#         - "world"
+#         - "world_nether"
+#     Here you can specify the requirements for sending this announcement.
+#     requirements:
+#       This option allows you to disable requirements check, it is advised to think about if you
+#       need the requirements or not, because if you disable the performance will be much better.
+#       enabled: true
+#       This option allows you to specify the permission that the player must have to receive this
+#       permission: "i.love.whereareiam"
+#       This option allows you to specify the worlds in which the player can receive this announcement.
+#       worlds:
+#         - "world"
+#         - "world_nether"
+
+announcements:
+  - id: "example"
+    enabled: true
+    message:
+      - ""
+      - "<gold><bold> Socialismus:</bold></gold>"
+      - "<white>  Thanks for installing my plugin!"
+      - "<white>  If you have any questions, feel free to ask!"
+      - ""
+      - "<gray>   Telegram: https://whereareiam.t.me/"
+      - "<gray>   Discord: @whereareiam"
+      - ""
+      - "<gray>  If you like the plugin, please leave a review on the plugin page, it will help me a lot!"
+      - ""
+    settings:
+      delay: 10
+      repeat: true
+    requirements:
+      enabled: true
+      permission: ""
+      worlds:
+        - "world"
+        - "world_nether"
+        - "world_the_end"

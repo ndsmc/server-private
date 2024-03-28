@@ -1,0 +1,221 @@
+#
+# SWAPPER DOCUMENTATION
+#
+# - whereareiam:
+# Preface, it was described earlier that you can use this to create shortcuts for
+# messages or emojis. But all functionality is not limited to that, you can create
+# much more, it only depends on your imagination.
+#
+# If you have any suggestions for improvements to this module, please feel free to
+# post a suggestion on the github page. https://github.com/whereareiam/Socialismus
+#
+# Here you can create as many Swappers as you like.
+# swappers:
+#
+#   Swapper toggle allows you to specify if it is enabled and if it is usable for players,
+#   a good option if you need to temporarily disable it instead of deleting it.
+#   - enabled: true
+#
+#     Content allows you to specify a list of content to replace a placeholder with.
+#     You can use PlaceholderAPI placeholders and MiniMessage formatting.
+#     content:
+#       - "example1"
+#       - "%player_name% is <gold><bold>amazing<reset>!"
+#       - "%itemsadder_my_super_custom_symbol%"
+#
+#     Here you can specify the content that will be displayed when the mouse is hovered
+#     over the replaced placeholder.
+#     You can use PlaceholderAPI placeholders and MiniMessage formatting.
+#     content-hover:
+#       - "<green>Oh look at that!"
+#
+#     Swapper's settings allow you to customize how it will behave.
+#     settings:
+#       Here you can specify what permission a player needs to use this swapper. If the
+#       required permission is not given, the player will get a message if it is not set to null.
+#       Set 'permission: ""' to disable permission check.
+#       permission: "privilege.2"
+#
+#       The Direct Search option controls how the search works. If you set it to true, it will
+#       search exactly for this placeholder and will not care if it is in the middle of a text
+#       or not. 
+#       
+#       EXAMPLE
+#         Our text is: "I like bananas".
+#         Our placeholder is: "an".
+#         The content is: "wow!"
+#         In the end, our text will change to this:
+#         "I like bwow!wow!as".
+#       direct-search: true
+#
+#       The Random content option controls the behavior of the content list. If you set it to
+#       true, it will grab any value from content and insert it instead of a placeholder. If
+#       you set it to true, it will grab any value from content and insert it instead of a
+#       placeholder. If you set it to false, the first content will be grabbed and inserted
+#       instead of the placeholder.
+#       If you want to use regex patterns in your placeholder, change this option to true and
+#       add $ to the beginning of your regex pattern in the placeholder list.
+#       random-content: true
+#
+#     A list of placeholders that will be replaced with content from the list above.
+#     placeholders:
+#       - "{example}"
+#       - "$(banana|bananas)"
+#       - ":lol:"
+#
+#     Here you can set requirements for using this swapper.
+#     requirements:
+#       enabled: true
+#       use-permission: "swapper.test"
+
+swappers:
+  - enabled: true
+    content:
+      - ":)"
+    content-hover: []
+    placeholders:
+      - "{happy}"
+    settings:
+      direct-search: true
+      random-content: false
+      sound: null
+      sound-volume: 1
+      sound-pitch: 1
+    requirements:
+      enabled: false
+      use-permission: ""
+  - enabled: true
+    content:
+      - ":("
+    content-hover: []
+    placeholders:
+      - "{sad}"
+    settings:
+      direct-search: true
+      random-content: false
+      sound: null
+      sound-volume: 1
+      sound-pitch: 1
+    requirements:
+      enabled: false
+      use-permission: ""
+  - enabled: true
+    content:
+      - "<3"
+    content-hover: []
+    placeholders:
+      - "{love}"
+    settings:
+      direct-search: true
+      random-content: false
+      sound: null
+      sound-volume: 1
+      sound-pitch: 1
+    requirements:
+      enabled: false
+      use-permission: ""
+  - enabled: true
+    content:
+      - ":D"
+    content-hover: []
+    placeholders:
+      - "{laugh}"
+    settings:
+      direct-search: true
+      random-content: false
+      sound: null
+      sound-volume: 1
+      sound-pitch: 1
+    requirements:
+      enabled: false
+      use-permission: ""
+  - enabled: true
+    content:
+      - ":'("
+    content-hover: []
+    placeholders:
+      - "{cry}"
+    settings:
+      direct-search: true
+      random-content: false
+      sound: null
+      sound-volume: 1
+      sound-pitch: 1
+    requirements:
+      enabled: false
+      use-permission: ""
+  - enabled: true
+    content:
+      - ">:("
+    content-hover: []
+    placeholders:
+      - "{angry}"
+    settings:
+      direct-search: true
+      random-content: false
+      sound: null
+      sound-volume: 1
+      sound-pitch: 1
+    requirements:
+      enabled: false
+      use-permission: ""
+  - enabled: true
+    content:
+      - ":O"
+    content-hover: []
+    placeholders:
+      - "{surprised}"
+    settings:
+      direct-search: true
+      random-content: false
+      sound: null
+      sound-volume: 1
+      sound-pitch: 1
+    requirements:
+      enabled: false
+      use-permission: ""
+  - enabled: true
+    content:
+      - ":/"
+    content-hover: []
+    placeholders:
+      - "{confused}"
+    settings:
+      direct-search: true
+      random-content: false
+      sound: null
+      sound-volume: 1
+      sound-pitch: 1
+    requirements:
+      enabled: false
+      use-permission: ""
+  - enabled: true
+    content:
+      - ":)"
+    content-hover: []
+    placeholders:
+      - "{excited}"
+    settings:
+      direct-search: true
+      random-content: false
+      sound: null
+      sound-volume: 1
+      sound-pitch: 1
+    requirements:
+      enabled: false
+      use-permission: ""
+  - enabled: true
+    content:
+      - ":|"
+    content-hover: []
+    placeholders:
+      - "{bored}"
+    settings:
+      direct-search: true
+      random-content: false
+      sound: null
+      sound-volume: 1
+      sound-pitch: 1
+    requirements:
+      enabled: false
+      use-permission: ""

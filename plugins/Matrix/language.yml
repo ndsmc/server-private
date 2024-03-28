@@ -1,0 +1,91 @@
+#### Matrix Config - language.yml ##################################################
+#
+#     Hi, welcome to use Matrix anti-cheat, this is language.yml, which is used
+#  to define the display language of anti-cheat. Here you can define what message
+#  the anti-cheat displays.
+#
+#  - If you encounter any problems, please go to our official Discord
+#  group for help: https://discord.gg/pEvY55J
+#
+#  Anyway, thanks for using Matrix anticheat! �?�
+#
+#####################################################################################
+
+# Здесь вы можете определить префикс сообщения
+prefix: '&7[&bMatrix&7]&r '
+
+# Определите сообщение объявления после того, как игрок был исключен за читерство
+kick-format: 'игрок %player% был исключен из-за читерства!'
+
+# Определите формат подробного сообщения
+verbose-format: '&7%player% не прошел &2%check% &7проверку &8| &7%message%(%tooltips%) &8| &7vl:%vl%&b(+%add_vl%) &7ping:%ping% tps:%tps% компонент: %component% версия: %version%'
+
+# Должен ли Matrix транслировать сообщение, когда игрок исключен?
+kick-broadcast: true
+
+# Какое сообщение должно быть отправлено игроку, когда Matrix обнаруживает,
+# что игрок отправляет сообщения в чат слишком быстро?
+spam-warning: 'Вы не можете так быстро общаться в чате или отправлять одно и то же содержимое снова и снова!'
+
+# Определяет сообщение, которое блокирует матрицу, когда игрок пытается быстро
+# переподключиться к серверу после того, как его исключили за читерство
+relog-message: 'Пожалуйста, подождите %time_left% секунд перед повторным входом в систему!'
+
+# Глобальные заполнители, здесь вы можете определить константы, вы можете использовать их в checks.yml
+#
+#  Например, определите:
+#     kick_help: "Если вы думаете, что это ложное срабатывание, вы можете связаться с модератором, чтобы решить проблему с ложным исключением"
+#  затем вы можете использовать %gp_kick_help% в checks.yml, он будет автоматически заменен на это предложение
+#
+global_placeholder: { }
+
+# Определите описание команд
+commands:
+  verbose: 'Показать/Скрыть подробные сообщения Matrix'
+  notify: 'Отправить сообщение всему онлайн-персоналу'
+  toggle-notify: 'Переключить вывод сообщения уведомления'
+  npc: 'Создать NPC для обнаружения KillAura за игроком'
+  kick: 'Исключить игрока'
+  msg: 'Отправить предупреждающие сообщения игроку'
+  gui: 'Открыть панель управления'
+  violations: 'Открыть GUI нарушений'
+  ping: 'Получить значение задержки игрока'
+  cps: 'Мониторить данные CPS игрока в течение секунд'
+  reload: 'Перезагрузить конфигурацию'
+
+gui:
+  main:
+    toggle-checks:
+      name: '&aПереключить проверки'
+      description: '&7Нажмите, чтобы открыть GUI проверок'
+    show-violations:
+      name: '&aПоказать нарушения'
+      description: '&7Нажмите, чтобы открыть GUI нарушений'
+    toggle-verbose:
+      name: '&aПереключить подробное сообщение'
+      description: '&7Нажмите, чтобы включить/отключить подробное сообщение'
+    reload-matrix:
+      name: '&cПерезагрузить Matrix'
+      description: '&7Нажмите, чтобы перезагрузить плагин'
+    server-status:
+      name: '&bСтатус сервера'
+    support-links:
+      name: '&bСсылки поддержки'
+    premium-user:
+      name: '&bПремиум-пользователь'
+    close-gui:
+      name: '&cЗакрыть GUI'
+
+misc:
+  update:
+    start-checking: 'Начать проверку обновления....'
+    updater: '§a> Обновление Matrix:'
+    has-update: '§cУ Matrix есть обновление: §f%latest%  §cтекущая версия: §2%current%'
+    latest: '§aВы используете последнюю версию Matrix-AntiCheat <3'
+    download-link: '§cСсылка для скачивания'
+  premium:
+    pass: 'Проверка версии Premium прошла!'
+    expire-time: 'Время истечения: %time%'
+  reload:
+    start-reload: 'Перезагрузка Matrix...'
+    reloaded: 'Matrix перезагружен.'

@@ -1,0 +1,18 @@
+# EndPortalTimer-1.4 by lesxmore
+# Change this to true if you already configured the values below
+enabled-plugin: true
+
+# Date, time, and timezone when the end portal will be accessible
+# Sample value for timezone is Asia/Singapore
+# You can check the available timezone values here https://docs.trifacta.com/display/DP/Supported+Time+Zone+Values
+# You MUST update the values of these.
+date: '2024-03-30'
+time: '15:00:00'
+timezone: 'Europe/Moscow'
+
+# Block access to the end portal frame
+blockEndPortal: true
+
+# The format of the message to send to players when they attempt to use the end portal and when the portal is accessible
+messageFormat: "&7Привет, просто хотел предупредить, что Портал в Край в данный момент отключен. Но не беспокойтесь, он снова станет доступным &a%endportaltimer_date% %endportaltimer_time% %endportaltimer_timezone%. &7У нас есть достаточно времени, чтобы подготовиться и сразиться с Драконом Края вместе! Продолжайте копать и строить, и мы в ближайшее время покорим Дракона Края."
+accessibleMessage: "&bТеперь Портал в Край доступен!"

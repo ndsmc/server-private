@@ -1,0 +1,43 @@
+settings:
+  recipes:
+    bundle:
+      enabled: true
+  gameplay-settings:
+    creeper-refund:
+      enabled: true
+    no-gamemode-void-death:
+      enabled: true
+    ender-dragon-stop-breaking:
+      enabled: true
+    leaf-decay:
+      enabled: true
+    container-passthrough:
+      enabled: true
+  chat:
+    death-invisible-killer:
+      message: <reset><victim> был убит
+      enabled: true
+    death-location:
+      message: <reset><red>Вы умерли в <reset><x> <y> <z>
+      enabled: true
+    send-sleep-percentage-message:
+      player-sleeping: <grey><playername> has fallen asleep. <sleeping> out of <needed>
+        required players in <worldname> are sleeping.
+      skipping-night: <grey>Enough players have slept! Skipping through the night
+        in <worldname>.
+      enabled: false
+  server:
+    player-login-limit-bypass:
+      enabled: true
+  anvil-splits-minecarts: true
+  anvil-splits-boats: true
+  items:
+    beehive-lore:
+      bees: '<reset><gray>Пчёлы: <bees>/<maxbees>'
+      honey: '<reset><gray>Уровень мёда: <honey>/<maxhoney>'
+      enabled: true
+  blocks:
+    shift-right-click-for-invisible-item-frames: false
+    double-doors:
+      enabled: true
+  unlock-all-recipes-on-join: false

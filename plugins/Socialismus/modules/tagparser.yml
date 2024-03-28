@@ -1,0 +1,57 @@
+#
+# TAG PARSER DOCUMENTATION
+#
+# What is Tag Parser?
+# It is a module that allows you to create custom tags.
+# That will parse text or hover text between the tags.
+#
+# Here you can create as many tag parsers as you like.
+# tag-parsers: 
+#  Here you can specify if the tag parser is enabled or not
+#  - enabled: true
+#
+#    Here you can specify the tag that will be used to parse the text.
+#    tag: "example"
+#
+#    Here you can specify the type of tag parser.
+#    Available types:
+#      - HOVER
+#      - TEXT
+#    type: HOVER
+#
+#    Here you can specify the content that will be parsed.
+#    content: 
+#      - "<yellow><bold>Example</bold></yellow>"
+#      - "<red><bold>Example</bold></red>"
+
+tag-parsers:
+  - enabled: true
+    tag: "globalChat"
+    type: HOVER
+    content:
+      - "<dark_gray> Информация</dark_gray>"
+      - "<white>  Чат: <green>Глобальный</green></white>  "
+      - " "
+      - "<gray> Глобальный чат - это чат, в котором вы можете  "
+      - "<gray> общаться со всеми на сервере  "
+  - enabled: true
+    tag: "playerInformation"
+    type: HOVER
+    content:
+      - "<dark_gray> Информация</dark_gray>"
+      - "<white>  Игрок: <green>%player_name%</green></white>  "
+  - enabled: true
+    tag: "messageInformation"
+    type: HOVER
+    content:
+      - "<dark_gray> Информация</dark_gray>"
+      - "<white>  Сообщение отправлено в: <green>%localtime_timezone_Europe/Moscow,HH:mm:ss z%</green></white>  "
+  - enabled: true
+    tag: "localChat"
+    type: HOVER
+    content:
+      - "<dark_gray> Информация</dark_gray>"
+      - "<white>  Чат: <green>Локальный (128 блоков)</green></white>  "
+      - " "
+      - "<gray> Локальный чат - это чат, в котором вы можете  "
+      - "<gray> общаться только с игроками, находящимися в радиусе 128 блоков от вас  "
