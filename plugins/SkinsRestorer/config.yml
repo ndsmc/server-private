@@ -62,7 +62,7 @@ database:
     ${mc-plugins-skinsrestorer-config-database-password}
     maxPoolSize: 10
     tablePrefix: sr_
-    connectionOptions: sslMode=trust&serverTimezone=UTC
+    connectionOptions: sslMode=false&serverTimezone=UTC
 
 ############
 # Commands #

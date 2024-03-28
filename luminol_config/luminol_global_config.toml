@@ -8,6 +8,9 @@
 		#If you want to use sand duping,please turn on this
 		enabled = false
 
+	[fixes.allow_sand_duping]
+		enabled = false
+
 	[fixes.allow_update_incorrect_trip_wire]
 		enabled = false
 
