@@ -47,7 +47,7 @@
 		# from the player to start being effected by DEAR.
 		start_distance = 12
 		blacklisted-entities = []
-		enabled = true
+		enabled = false
 
 	[optimizations.skip_goal_selector_tick_in_inactive_tick]
 		enabled = true
