@@ -24,3 +24,4 @@
 /crash-reports
 *.tmp
 *.db
+*.log
