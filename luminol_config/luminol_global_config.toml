@@ -212,7 +212,7 @@
 		enabled = false
 
 	[misc.server_mod_name]
-		name = "Private v1.20.4-1.2.0"
+		name = "Private v1.20.4-1.2.1"
 		vanilla_spoof = false
 
 	[misc.watchdog]
