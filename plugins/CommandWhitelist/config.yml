@@ -41,6 +41,7 @@ groups:
     - reply
     - w
     - m
+    - tell
     - unignore
     - ignore
     - ignorelist
@@ -60,4 +61,5 @@ groups:
     - topplaytime
     - vreconnect
     - vlist
+    - groups
     - worldstats

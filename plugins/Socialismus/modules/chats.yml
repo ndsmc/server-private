@@ -72,7 +72,7 @@ chats:
       symbol: "!"
       command: "global"
     formats:
-      - format: "<gold><bold><globalChat>G</globalChat></bold></gold><dark_gray><globalChat> | </globalChat><gray><click:SUGGEST_COMMAND:/w ><playerInformation>{playerName}</playerInformation></click>: <white><messageInformation>{message}</messageInformation>"
+      - format: "<yellow><bold><globalChat>G</globalChat></bold></yellow><dark_gray><globalChat> | </globalChat><gray><click:SUGGEST_COMMAND:/w ><playerInformation>{playerName}</playerInformation></click>: <white><messageInformation>{message}</messageInformation>"
         permission: ""
         sound: null
     enable-swapper: true
@@ -101,7 +101,7 @@ chats:
       symbol: ""
       command: "local"
     formats:
-      - format: "<dark_gray><localChat>| </localChat><gray><click:SUGGEST_COMMAND:/w ><playerInformation>{playerName}</playerInformation></click>: <white><messageInformation>{message}</messageInformation>"
+      - format: "<gold><bold><localChat>L</localChat></bold></gold><dark_gray><localChat> | </localChat><gray><click:SUGGEST_COMMAND:/w ><playerInformation>{playerName}</playerInformation></click>: <#d0d0d0><messageInformation>{message}</messageInformation>"
         permission: ""
         sound: null
     enable-swapper: true
@@ -121,6 +121,35 @@ chats:
         worlds: []
       recipient:
         radius: 128
+        see-own-message: true
+        see-permission: ""
+        worlds: []
+  - id: "whisper"
+    usage:
+      type: SYMBOL
+      symbol: "*"
+      command: "whisper"
+    formats:
+      - format: "<blue><bold><whisperChat>W</whisperChat></bold></blue><dark_gray><whisperChat> | </whisperChat><gray><click:SUGGEST_COMMAND:/w ><playerInformation>{playerName}</playerInformation></click>: <gray><messageInformation>{message}</messageInformation>"
+        permission: ""
+        sound: null
+    enable-swapper: true
+    mentions:
+      enabled: true
+      mention-self: false
+      mention-all: false
+      mention-nearby: false
+      max-mentions: 5
+      radius: 16
+    requirements:
+      enabled: true
+      sender:
+        min-online: 0
+        symbol-count-threshold: 0
+        use-permission: ""
+        worlds: []
+      recipient:
+        radius: 16
         see-own-message: true
         see-permission: ""
         worlds: []

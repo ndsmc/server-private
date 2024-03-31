@@ -29,7 +29,7 @@ modules:
   # Bubble chat is a module that changes the way players chat with each other.
   # It adds a bubble (hologram) with a message from the chat over the player's head.
   # *Works only if ProtocolLib is installed*
-  bubblechat: true
+  bubblechat: false
 
   # The announcer module allows you to create announcements that will be displayed
   # on the server. You can create as many announcements as you want and set the
@@ -46,7 +46,7 @@ modules:
     enable-for-chats: true
     # Enable for bubbles allows you to enable or disable whether the module should work
     # in the bubbles.
-    enable-for-bubbles: true
+    enable-for-bubbles: false
   tag-parser: true
 
 # In this section, you can switch the plugin's behavior mode, which

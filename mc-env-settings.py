@@ -14,7 +14,6 @@ def parse_mc_env(env_file):
                 path_variables[current_path] = []
             elif line.startswith("mc-") and current_path is not None:
                 var_key, var_value = line.strip().split("=", 1)
-                print(var_key, var_value)
                 path_variables[current_path].append(
                     (var_key.strip(), var_value.strip())
                 )
@@ -63,5 +62,4 @@ if __name__ == "__main__":
 
     print(f"Парсинг файла: {args.env_file}")
     path_variables = parse_mc_env(args.env_file)
-    print(f"Найдены следующие пути и переменные: {path_variables}")
     replace_values_in_files(path_variables, reverse=args.reverse)

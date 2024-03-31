@@ -39,7 +39,7 @@ commands:
     announce: "<dark_gray>| <white>Объявление..."
   private-message-command:
     description: "Отправить игроку личное сообщение"
-    format: "{senderName} -> {recipientName}: {message}"
+    format: "<green>| <gray>{senderName} <#d0d0d0>> <gray>{recipientName}: <#ffccaa>{message}"
   bubble-command:
     description: "Отправить сообщение в пузырьке."
     success: " <dark_gray>| <white>Вы отправили сообщение в пузырьке."

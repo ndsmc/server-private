@@ -1,0 +1,40 @@
+#
+# PARAMETER EXPLANATION:
+#
+# command: allows you to change the command and its aliases by printing all
+# aliases separated by | symbol.
+#
+# permission: needed right for player/staff to use this specific command and
+# aliases. You can leave it empty to disable it.
+#
+# syntax: this parameter is printed if the command is used incorrectly.
+#
+# enabled: almost all commands can be enabled or disabled with this option.
+
+main-command:
+  command: "socialismus|social"
+  permission: "socialismus.player"
+reload-command:
+  sub-command: "reload"
+  permission: "socialismus.reload"
+  enabled: true
+announce-command:
+  sub-command: "announce|broadcast|bc"
+  permission: "socialismus.announce"
+  syntax: "[announcement id]"
+  enabled: true
+private-message-command:
+  command: "w|m|tell"
+  permission: "socialismus.player"
+  syntax: "[recipient] [message]"
+  enabled: true
+bubble-command:
+  sub-command: "bubble"
+  permission: "socialismus.bubble"
+  syntax: "[message]"
+  enabled: false
+reply-command:
+  command: "reply|r"
+  permission: "socialismus.player"
+  syntax: "[message]"
+  enabled: true

@@ -8,9 +8,6 @@
 		#If you want to use sand duping,please turn on this
 		enabled = false
 
-	[fixes.allow_sand_duping]
-		enabled = false
-
 	[fixes.allow_update_incorrect_trip_wire]
 		enabled = false
 
@@ -56,7 +53,7 @@
 		enabled = true
 
 	[optimizations.alternative_keepalive_handling]
-		enabled = true
+		enabled = false
 
 	[optimizations.async_path_processing]
 		max_threads = 0
@@ -215,7 +212,7 @@
 		enabled = false
 
 	[misc.server_mod_name]
-		name = "Luminol"
+		name = "Private v1.20.4-1.1.0"
 		vanilla_spoof = false
 
 	[misc.watchdog]
@@ -230,7 +227,7 @@
 		enabled = true
 
 	[misc.io_uring_support]
-		enabled = true
+		enabled = false
 
 	[misc.mojang_out_of_order_chat_check]
 		enabled = false
