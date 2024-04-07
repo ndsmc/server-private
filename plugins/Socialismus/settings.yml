@@ -21,7 +21,7 @@ modules:
   # Swapper module adds to your chat message shortcuts, emojis or anything you
   # can imagine.
   swapper:
-    enabled: true
+    enabled: false
     # Suggests swappers in chat (only for swappers without regex).
     # *Works only if ProtocolLib is installed*
     suggest: true

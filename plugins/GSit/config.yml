@@ -21,7 +21,7 @@ Options:
     - snow
     bottom-part-only: true
     empty-hand-only: true
-    max-distance: 3.15
+    max-distance: 3.5
     sit-message: false
     default-sit-mode: true
   PlayerSit:

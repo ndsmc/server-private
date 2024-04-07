@@ -145,7 +145,7 @@ killaura:
   # Violation Thresholds
   # number_of_violations: '<command>'
   commands:
-    10: 'matrix npc %player% 100'
+#    10: 'matrix npc %player% 100'
     20: 'matrix notify %player% возможно, использует читы для боя (KillAura)'
     35: 'matrix notify %player% использует читы для боя (KillAura) #2'
     45: 'matrix delay 5 matrix kick %player% KillAura'
@@ -157,7 +157,7 @@ hitbox:
   enable: true
 
   # Maximum reach distance (default: 3.15)
-  max_reach: 3.15
+  max_reach: 4.0
 
   # The tick length of the traceback when calculating the hitbox
   trace_back_length: 8
@@ -167,7 +167,7 @@ hitbox:
   #  1. none   -  do nothing
   #  2. silent -  set damage to zero (Recommend)
   #  3. cancel -  cancel the attack
-  cancel_way: cancel
+  cancel_way: none
 
   # Violations needed to cancel illegal hits
   cancel_vl: 5
@@ -203,9 +203,10 @@ hitbox:
   # number_of_violations: '<command>'
   commands:
     10: 'matrix notify %player% попытался атаковать существо за пределами максимальной дистанции (HitBox)'
-    12: 'matrix npc %player% 120'
+#    12: 'matrix npc %player% 120'
     15: 'matrix notify %player% попытался атаковать существо за пределами максимальной дистанции (HitBox) #2'
-    24: 'matrix kick %player% Читы на дистанцию/HitBox'
+    999: 'matrix notify %player% попытался атаковать существо за пределами максимальной дистанции (HitBox) #ban'
+    1000: 'ban %player% Читы на дистанцию/HitBox'
 
 ## Click check
 # Prevent players from clicking too fast, or using autoclickers to attack other entities
@@ -214,7 +215,7 @@ click:
   enable: true
 
   # What should the player's highest CPS be? When the player exceeds this cps, it will be detected
-  max_cps: 15
+  max_cps: 30
 
   # Modules
   check_cps: true
@@ -238,19 +239,19 @@ click:
   commands:
     10: 'matrix notify %player% попытался кликнуть необычным образом (Click) #1'
     18: 'matrix notify %player% попытался кликнуть необычным образом (Click) #2'
-    30: 'matrix kick %player% Необычный клик'
+    200: 'matrix kick %player% Необычный клик'
 
 ## Movement Speed Check
 # This check prevents the player from moving abnormally
 move:
   # Enable this check?
-  enable: false
+  enable: true
 
   # Should Matrix block NoSlow cheating?
-  check_noslow: true
+  check_noslow: false
 
   # When the player reaches this VL, start to pull back the player's abnormal movement
-  cancel_vl: 35
+  cancel_vl: -1
 
   # Should Matrix apply damage to the player when the player is setback?
   apply_damage: true
@@ -277,7 +278,7 @@ move:
     step: true
 
   # Should Matrix teleport the player into the void if the player cheats on the void?
-  allow_setback_to_void: true
+  allow_setback_to_void: false
 
   # Custom vl decay interval(seconds) and vl decay step size
   decay:
@@ -289,19 +290,19 @@ move:
   commands:
     55: 'matrix notify %player% попытался двигаться необычным образом (Move) #1'
     90: 'matrix notify %player% попытался двигаться необычным образом (Move) #2'
-    220: 'matrix kick %player% Необычное движение'
+    1000: 'matrix kick %player% Необычное движение'
 
 ## BadPackets
 # Prevents player from sending too many movement packets or sending illegal packets
 badpackets:
   # Enable this check?
-  enable: false
+  enable: true
 
   # Should Matrix block player from placing blocks in the air?
   # The player must against another block to place blocks, otherwise it will be detected
   # But some schematic mod like litematica has this feature, so you can turn it off if you
   # allow players to use schematic mod
-  check_air_place: true
+  check_air_place: false
 
   # Custom vl decay interval(seconds) and vl decay step size
   decay:
@@ -313,7 +314,7 @@ badpackets:
   commands:
     100: 'matrix notify %player% отправляет необычные пакеты на сервер (BadPackets) #1'
     150: 'matrix notify %player% отправляет необычные пакеты на сервер (BadPackets) #2'
-    240: 'matrix kick %player% Отправка необычных пакетов'
+    1000: 'matrix kick %player% Отправка необычных пакетов'
 
 ## Delay Check
 # It prevents the player from speeding up certain actions, such as eating quickly, or quickly healing
@@ -322,7 +323,7 @@ delay:
   enable: true
 
   # Should Matrix block player actions when cheating is detected?
-  cancel_action: true
+  cancel_action: false
 
   # Modules List
   # You can define the VL weight of each module, and -1 equals to disable it
@@ -330,8 +331,8 @@ delay:
   check_using_items: 1
   check_using_bow: 1
   check_auto_splash: 2
-  check_inventory_action: 1
-  check_auto_totem: 1
+  check_inventory_action: -1
+  check_auto_totem: -1
   check_fast_throw: 1
 
   # Custom vl decay interval(seconds) and vl decay step size
@@ -344,16 +345,16 @@ delay:
   commands:
     3: 'matrix notify %player% пытается ускорить действия (Delay) #1'
     5: 'matrix notify %player% пытается ускорить действия (Delay) #2'
-    10: 'matrix kick %player% Ускорение операций'
+    100: 'matrix kick %player% Ускорение операций'
 
 ## Block
 # Check prevents the player from breaking, placing block quickly
 block:
   # Enable this check?
-  enable: false
+  enable: true
 
   # Violations needed to cancel illegal breaking/placing of blocks (-1 = never cancel)
-  cancel_vl: 5
+  cancel_vl: -1
 
   # Modules List
   # You can turn off some modules here
@@ -361,7 +362,7 @@ block:
     # It can detect player breaking block faster
     fastbreak:
       enable: true
-      vl_weight: 4
+      vl_weight: 2
     # It can detect player placing block faster
     fastplace:
       enable: true
@@ -385,16 +386,16 @@ block:
   # number_of_violations: '<command>'
   commands:
     10: 'matrix notify %player% попытался установить/сломать блок слишком быстро (FastPlace/FastBreak)'
-    20: 'matrix kick %player% Читы на быстрое размещение/разрушение блоков (FastPlace/FastBreak)'
+    200: 'matrix kick %player% Читы на быстрое размещение/разрушение блоков (FastPlace/FastBreak)'
 
 ## Scaffold check
 # Check prevents player bridging blocks or towering up faster than normal speed
 scaffold:
   # Enable this check
-  enable: false
+  enable: true
 
   # Cancel VL
-  cancel_vl: 15
+  cancel_vl: -1
 
   # Modules
   modules:
@@ -433,7 +434,7 @@ scaffold:
   commands:
     10: 'matrix notify %player% попытался быстро строить мост из блоков (Scaffold)'
     15: 'matrix notify %player% попытался быстро строить мост из блоков (Scaffold) #2'
-    24: 'matrix kick %player% Читы на быстрое строение моста/башни (Scaffold/Tower)'
+#    24: 'matrix kick %player% Читы на быстрое строение моста/башни (Scaffold/Tower)'
 
 ## Jesus
 # Check prevents the player from moving too too quickly in liquids, or walking on liquid.
@@ -442,11 +443,11 @@ jesus:
   enable: true
 
   # Violations needed to cancel illegal movements (-1 = never cancel)
-  cancel_vl: 15
+  cancel_vl: -1
 
   # Should Matrix ignore whether player is in swimming?
   # This feature can prevent swimming status desync
-  ignore_swim_pose: false
+  ignore_swim_pose: true
 
   # Custom vl decay interval(seconds) and vl decay step size
   decay:
@@ -458,7 +459,7 @@ jesus:
   commands:
     20: 'matrix notify %player% попытался нелегально переместиться в жидкости (Jesus)'
     40: 'matrix notify %player% попытался нелегально переместиться в жидкости (Jesus) #2'
-    50: 'matrix kick %player% Читы на перемещение по воде (Jesus/WaterSpeed/WaterFly)'
+    350: 'matrix kick %player% Читы на перемещение по воде (Jesus/WaterSpeed/WaterFly)'
 
 ## Velocity
 # Check prevents the player from using any type of anti-knockback hacks.
@@ -469,7 +470,7 @@ velocity:
   # The time to wait for players to respond to velocity (ticks)
   # If the player does not respond to velocity after that
   # time, the player will be detected.
-  wait_time: 20
+  wait_time: 80
 
   # Ignore lag player, this feature can ignore the player who
   # is lagging or changing resource pack.
@@ -491,7 +492,7 @@ velocity:
   commands:
     10: 'matrix notify %player% попытался игнорировать скорость сервера (Velocity)'
     15: 'matrix notify %player% попытался игнорировать скорость сервера (Velocity) #2'
-    20: 'matrix kick %player% Velocity/Anti-Knockback'
+#    20: 'matrix kick %player% Velocity/Anti-Knockback'
 
 ## Spam
 # Check prevents a player from spamming messages in the servers chat.
@@ -503,7 +504,7 @@ chat:
   min_time: 3
 
   # Violations needed to cancel sent messages (-1 = never cancel)
-  cancel_vl: 3
+  cancel_vl: -1
 
   # Custom vl decay interval(seconds) and vl decay step size
   decay:
@@ -543,20 +544,20 @@ interact:
   # number_of_violations: '<command>'
   commands:
     10: 'matrix notify %player% попытался незаконно взаимодействовать с сущностью/блоком (Interact)'
-    15: 'matrix kick %player% Незаконное взаимодействие с блоком/сущностью'
+#    15: 'matrix kick %player% Незаконное взаимодействие с блоком/сущностью'
 
 ## Phase
 # Check prevents the player people glitching through blocks.
 phase:
   # Enable this check?
-  enable: true
+  enable: false
 
   # How much time should Matrix prevent the player from moving if
   # the player frequently tries to move the block? (milliseconds)
   freeze_time: 400
 
   # Violations needed to cancel illegal movements
-  cancel_vl: 5
+  cancel_vl: -1
 
   # Exclude block types
   exclude_types: []
@@ -577,7 +578,7 @@ phase:
 # NOTE: THIS CHECK IS ONLY WORK FOR PREMIUM USERS
 autobot:
   # Enable this check?
-  enable: false
+  enable: true
 
   # Custom vl decay interval(seconds) and vl decay step size
   decay:
@@ -589,25 +590,25 @@ autobot:
   commands:
     5: 'matrix notify %player% подозревается в использовании автоматических роботов (AutoBot)'
     10: 'matrix notify %player% подозревается в использовании автоматических роботов (AutoBot) #2'
-    15: 'matrix kick %player% Авто-Бот'
+#    15: 'matrix kick %player% Авто-Бот'
 
 ## Elytra
 # Checks prevents player using Elytra+, ElytraFlight, etc
 # Only works for 1.9+
 elytra:
   # Enable this check?
-  enable: false
+  enable: true
 
   # Should Matrix be forced to pull back players who are particularly
   # cheating? Even if they do not reach cancel_vl (default: true)
   force_setback: true
 
   # Setback violation level (-1 = never setback)
-  setback_vl: 5
+  setback_vl: -1
 
   # unequip elytra VL
   # If player reached this VL, Matrix will make it out of the gliding state (-1 = disable this feature)
-  unequip_vl: 20
+  unequip_vl: -1
 
   # Custom vl decay interval(seconds) and vl decay step size
   decay:
@@ -619,14 +620,14 @@ elytra:
   commands:
     10: 'matrix notify %player% подозревается в использовании полета с помощью Elytra'
     20: 'matrix notify %player% подозревается в использовании полета с помощью Elytra #2'
-    40: 'matrix kick %player% Полет с помощью Elytra'
+#    40: 'matrix kick %player% Полет с помощью Elytra'
 
 ## Vehicle
 # Checks prevents player using VehicleFlight, VehicleSpeed, EntitySpeed..
 # Only works for 1.9+
 vehicle:
   # Enable this check?
-  enable: false
+  enable: true
 
   # Prevent players from using certain creatures as vehicles
   # All entity types: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html
@@ -647,10 +648,10 @@ vehicle:
     enable: true
 
     # setback vl (-1 = never setback)
-    setback_vl: 4
+    setback_vl: -1
 
     # leave vehicle vl (-1 = never leave vehicle)
-    leave_vehicle: 10
+    leave_vehicle: -1
 
   # Custom vl decay interval(seconds) and vl decay step size
   decay:
@@ -662,4 +663,4 @@ vehicle:
   commands:
     5: 'matrix notify %player% подозревается в использовании чита на транспортные средства (Vehicle)'
     10: 'matrix notify %player% подозревается в использовании чита на транспортные средства (Vehicle) #2'
-    17: 'matrix kick %player% Подозрительное движение транспортного средства'
+#    17: 'matrix kick %player% Подозрительное движение транспортного средства'

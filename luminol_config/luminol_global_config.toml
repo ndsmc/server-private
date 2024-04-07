@@ -21,7 +21,7 @@
 			warn_on_detected = true
 
 		[fixes.folia.prevent_teleportasync_call_during_moving]
-			enabled = false
+			enabled = true
 			throw_on_detected = true
 
 	[fixes.use_vanilla_random_source]
@@ -53,7 +53,7 @@
 		enabled = true
 
 	[optimizations.alternative_keepalive_handling]
-		enabled = false
+		enabled = true
 
 	[optimizations.async_path_processing]
 		max_threads = 0
@@ -212,7 +212,7 @@
 		enabled = false
 
 	[misc.server_mod_name]
-		name = "Private v1.20.4-1.2.1"
+		name = "Private v1.3.0+1.20.4"
 		vanilla_spoof = false
 
 	[misc.watchdog]
