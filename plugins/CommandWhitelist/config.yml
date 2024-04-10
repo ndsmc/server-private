@@ -37,6 +37,7 @@ groups:
     - s
   default:
     commands:
+    - bmpc
     - r
     - reply
     - w
