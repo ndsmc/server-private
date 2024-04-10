@@ -212,7 +212,7 @@
 		enabled = false
 
 	[misc.server_mod_name]
-		name = "Private v1.3.0+1.20.4"
+		name = "Private v1.4.0+1.20.4"
 		vanilla_spoof = false
 
 	[misc.watchdog]
@@ -242,7 +242,7 @@
 		ping_color_list = ["GREEN", "YELLOW", "RED", "PURPLE"]
 		format = "<gray>TPS<yellow>:</yellow> <tps> MSPT<yellow>:</yellow> <mspt> Ping<yellow>:</yellow> <ping>ms"
 		tps_color_list = ["GREEN", "YELLOW", "RED", "PURPLE"]
-		enabled = false
+		enabled = true
 		update_interval_ticks = 15
 
 [gameplay]

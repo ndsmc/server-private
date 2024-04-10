@@ -1,8 +1,0 @@
-# ForcePack uses Languagy. Language files will automatically update. Learn more here: https://fortitude.islandearth.net/forcepack/language-files
-declined: "<red>Вы должны принять ресурс-пак, чтобы играть на нашем сервере.<newline><red>Вы можете сделать это следующим образом:<newline><yellow>1. В списке серверов выберите сервер.<newline><yellow>2. Нажмите 'Редактировать'.<newline><yellow>3. Измените 'Ресурс-паки сервера' на <green>Включено<yellow>."
-accepted: "<green>Спасибо за принятие нашего ресурс-пака! Теперь вы можете играть."
-download_start_title: "<gold>Загрузка ресурс-пака..."
-download_start_subtitle: "<gold>Это может занять некоторое время..."
-download_failed: "<red>Сбой загрузки ресурс-пака. Пожалуйста, переподключитесь и попробуйте снова."
-prompt_text: "<yellow>Пожалуйста, примите наш ресурс-пак, чтобы улучшить ваш опыт игры на сервере!" # Only on 1.18+ (1.17 does not have API)
-reloading: "<green>Переустановка вашего ресурс-пака из-за обновления!"

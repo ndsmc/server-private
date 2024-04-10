@@ -1,0 +1,76 @@
+# SuperVanish v6.2.18 - Messages
+#
+# Information:
+# <..> means that .. is required; [..] means that .. is optional and can be left out; | inside [] or <> stands for 'OR'
+# You can use the & character for color codes; Example: '&cThe color of this text would be red!'
+# You can use #XXXXXX for HEX color codes. Example: '#663EF6This text would be purple!'
+# You can use %p% to get the player's name; Example: '&4&l%p%, you aren't allowed to execute this command!'
+# You can use %other% to get the name of the target or cause
+# You can use %d% to get the player's display name; if you use Essentials then the display name contains the prefix too
+# You can use %tab% to get the player's name in the player list (TAB)
+# You can use %prefix% to get the player's prefix (Requires Vault)
+# You can use %suffix% to get the player's suffix (Requires Vault)
+# You can use %group% to get the player's group (Requires Vault)
+# You can use %nick% to get the player's nickname (Requires Essentials)
+# Some messages allow different, unique variables too
+#
+# NOTE: You can get WAY more placeholders by installing PlaceholderAPI or MVdWPlaceholderAPI
+#
+# Empty messages will not be sent
+# Using \n starts a new line
+#
+# Important:
+# You must double single quotes if you want to use them inside a message.
+# You must NOT use any tab characters inside this file (indent key) otherwise YAML will spam your console with errors!
+# !! If there are errors in the console after editing this file paste it into an online YAML parser to see if
+# there are any YAML syntax errors !!
+Messages:
+  NoPermission: '&4Отказано в доступе! Вам не разрешено это делать.'
+  InvalidUsage: '&cНеверное использование, вы можете использовать &6/sv help&c для списка команд.'
+  VanishMessage: '&e%p% покинул игру'
+  ReappearMessage: '&e%p% присоединился к игре'
+  VanishMessageWithPermission: '&a[SV] %p% скрылся.'
+  ReappearMessageWithPermission: '&a[SV] %p% появился.'
+  OnVanish: '&aТеперь вы невидимы!'
+  OnReappear: '&aТеперь вы видимы!'
+  OnVanishCausedByOtherPlayer: '&a%other% скрыл вас, теперь вы невидимы!'
+  OnReappearCausedByOtherPlayer: '&a%other% показал вас, теперь вы видимы!'
+  AlreadyVanishedError: '&cВы уже невидимы!'
+  NotVanishedError: '&cВы не невидимы!'
+  SilentJoinMessageForAdmins: '&a[SV] %p% присоединился молча.'
+  SilentQuitMessageForAdmins: '&a[SV] %p% ушел молча.'
+  SilentDeathMessage: '&a[SV] %deathmsg%'
+  RemindingMessage: '&aВы все еще невидимы!'
+  ListMessagePrefix: '&aНевидимые игроки:&f %l'
+  ActionBarMessage: '&aВы невидимы для других игроков!'
+  HideOtherMessage: '&aИгрок &e%other%&a теперь невидим!'
+  ShowOtherMessage: '&aИгрок &e%other%&a теперь видим!'
+  CannotHideOtherPlayer: '&cВы не можете изменить видимость игрока %other%!'
+  AlreadyInvisibleMessage: '&cИгрок &e%other%&c уже невидим!'
+  AlreadyVisibleMessage: '&cИгрок &e%other%&c уже видим!'
+  PluginReloaded: '&aSuperVanish успешно перезагружен (%time%мс)!'
+  InvalidSender: '&cВы должны быть игроком, чтобы выполнить эту команду!'
+  PlayerNotOnline: '&cЭтот игрок не в сети!'
+  PlayerNonExistent: '&cЭтот игрок не существует!'
+  ToggledPickingUpItemsOn: '&eПодбирание предметов теперь включено.'
+  ToggledPickingUpItemsOff: '&eПодбирание предметов теперь выключено.'
+  UpdateWarning: '&cПредупреждение! Пересоздание %updates% сбрасывает %changes%. Пожалуйста, используйте &e/sv recreatefiles confirm&c, если хотите продолжить.'
+  RecreatedConfig: '&aУспешно пересоздано %updates%! Пожалуйста, проверьте %changes%.'
+  NoConfigUpdateAvailable: '&eВаши файлы SuperVanish обновлены!'
+  RecreationRequiredMsg: '&c[SV] Ваши файлы SuperVanish не обновлены, вы можете использовать &e/sv recreatefiles&c для их пересоздания или используйте /sv recreatefiles dismiss, чтобы отклонить это сообщение. Пересоздание файлов SuperVanish дает вам доступ к новым настройкам и функциям плагина.'
+  DismissedRecreationWarning: '&eВы больше не получаете уведомлений об этом пересоздании.'
+  UndismissedRecreationWarning: '&eТеперь вы снова получаете уведомления об этом пересоздании.'
+  PrintedStacktrace: '&eУспешно создан стек вызовов, смотрите консоль!'
+  EntityHitDenied: '&c[SV] Вы не можете бить игроков или мобов в режиме невидимости!'
+  BlockPlaceDenied: '&c[SV] Вы не можете ставить блоки в режиме невидимости!'
+  BlockBreakDenied: '&c[SV] Вы не можете ломать блоки в режиме невидимости!'
+  PluginOutdated: '&c[SV] Ваша текущая версия SuperVanish устарела. Новая версия: ''%new%''; Текущая: ''%current%'''
+  DynmapFakeJoin: '%d% присоединился'
+  DynmapFakeQuit: '%d% покинул'
+  HelpHeader: "&a<---------------&e Справка по SuperVanish &a--------------->"
+  HelpFormat: "&6%usage% &7- &b%description% &c(%permission%)"
+  PlaceholderIsVanishedYes: "Да"
+  PlaceholderIsVanishedNo: "Нет"
+  PlaceholderVanishPrefix: '&a[V] &r'
+  PlaceholderVanishSuffix: ' &r&a[V]'
+MessagesVersion: 6.2.18

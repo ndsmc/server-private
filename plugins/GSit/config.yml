@@ -2,6 +2,7 @@ Lang:
   lang: ru_ru
   client-lang: true
 Options:
+  debug: false
   ${mc-plugins-gsit-config-options-check-for-update}
   get-up-damage: false
   get-up-sneak: true
@@ -42,6 +43,7 @@ Options:
     lay-snoring-night-only: true
     lay-night-skip: true
   Crawl:
+    default-crawl-mode: true
     get-up-sneak: true
     double-sneak: false
   trusted-region-only: false
