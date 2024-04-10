@@ -290,7 +290,7 @@ move:
   commands:
     55: 'matrix notify %player% попытался двигаться необычным образом (Move) #1'
     90: 'matrix notify %player% попытался двигаться необычным образом (Move) #2'
-    1000: 'matrix kick %player% Необычное движение'
+    10000: 'matrix kick %player% Необычное движение'
 
 ## BadPackets
 # Prevents player from sending too many movement packets or sending illegal packets
@@ -351,7 +351,7 @@ delay:
 # Check prevents the player from breaking, placing block quickly
 block:
   # Enable this check?
-  enable: true
+  enable: false
 
   # Violations needed to cancel illegal breaking/placing of blocks (-1 = never cancel)
   cancel_vl: -1
