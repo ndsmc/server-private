@@ -1,0 +1,40 @@
+# Format variables:
+# %sender% -> sender's nickname
+# %message% -> message
+# %result% -> result (try, dice, coin)
+
+commands:
+  me:
+    enabled: true
+    format: '§7* %sender% §o%message% *'
+    usage: '[§c!§f] §cИспользование: /me (сообщение)'
+    radius: 20
+  gme:
+    enabled: true
+    format: '§eG §8§l|§r §7* %sender% §o%message% *'
+    usage: '[§c!§f] §cИспользование: /gme (сообщение)'
+  try:
+    enabled: true
+    format: '§e*§f %sender%: %action% (%result%§f)'
+    usage: '[§c!§f] §cИспользование: /try (сообщение)'
+    radius: 20
+    results:
+      - '§aУспешно'
+      - '§cНеудачно'
+      - '§eПочти успешно'
+  do:
+    enabled: true
+    format: '§6*§f %sender% %action% §e'
+    usage: '[§c!§f] §cИспользование: /do (действие)'
+    radius: 20
+  coin:
+    enabled: true
+    format: '§8*§6 %sender% §fбросил монетку (§6%result%§f) §8'
+    radius: 20
+    obverse: '§6Орёл'
+    reverse: '§6Решка'
+  whisper:
+    enabled: false
+    format: '§7§o%sender% шепчет: %message%'
+    usage: '[§c!§f] §cИспользование: /whisper (сообщение)'
+    radius: 4

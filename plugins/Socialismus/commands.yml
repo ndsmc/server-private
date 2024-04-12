@@ -37,4 +37,4 @@ reply-command:
   command: "reply|r"
   permission: "socialismus.player"
   syntax: "[message]"
-  enabled: true
+  enabled: false

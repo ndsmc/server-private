@@ -24,7 +24,7 @@ modules:
     enabled: false
     # Suggests swappers in chat (only for swappers without regex).
     # *Works only if ProtocolLib is installed*
-    suggest: true
+    suggest: false
 
   # Bubble chat is a module that changes the way players chat with each other.
   # It adds a bubble (hologram) with a message from the chat over the player's head.
@@ -43,7 +43,7 @@ modules:
 
     # Enable for chats allows you to enable or disable whether the module should work
     # in the chat.
-    enable-for-chats: true
+    enable-for-chats: false
     # Enable for bubbles allows you to enable or disable whether the module should work
     # in the bubbles.
     enable-for-bubbles: false

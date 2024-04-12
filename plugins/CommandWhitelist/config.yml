@@ -47,9 +47,11 @@ groups:
     - ignore
     - ignorelist
     - co
+    - gme
     - me
     - try
     - do
+    - coin
     - sit
     - lay
     - crawl
@@ -64,3 +66,5 @@ groups:
     - vlist
     - groups
     - worldstats
+    - tps
+    - tpsbar
