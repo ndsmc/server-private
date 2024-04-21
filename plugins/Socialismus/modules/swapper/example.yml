@@ -69,7 +69,7 @@
 #       use-permission: "swapper.test"
 
 swappers:
-  - enabled: true
+  - enabled: false
     content:
       - ":)"
     content-hover: []
@@ -84,7 +84,7 @@ swappers:
     requirements:
       enabled: false
       use-permission: ""
-  - enabled: true
+  - enabled: false
     content:
       - ":("
     content-hover: []
@@ -99,7 +99,7 @@ swappers:
     requirements:
       enabled: false
       use-permission: ""
-  - enabled: true
+  - enabled: false
     content:
       - "<3"
     content-hover: []
@@ -114,7 +114,7 @@ swappers:
     requirements:
       enabled: false
       use-permission: ""
-  - enabled: true
+  - enabled: false
     content:
       - ":D"
     content-hover: []
@@ -129,7 +129,7 @@ swappers:
     requirements:
       enabled: false
       use-permission: ""
-  - enabled: true
+  - enabled: false
     content:
       - ":'("
     content-hover: []
@@ -144,7 +144,7 @@ swappers:
     requirements:
       enabled: false
       use-permission: ""
-  - enabled: true
+  - enabled: false
     content:
       - ">:("
     content-hover: []
@@ -159,7 +159,7 @@ swappers:
     requirements:
       enabled: false
       use-permission: ""
-  - enabled: true
+  - enabled: false
     content:
       - ":O"
     content-hover: []
@@ -174,7 +174,7 @@ swappers:
     requirements:
       enabled: false
       use-permission: ""
-  - enabled: true
+  - enabled: false
     content:
       - ":/"
     content-hover: []
@@ -189,7 +189,7 @@ swappers:
     requirements:
       enabled: false
       use-permission: ""
-  - enabled: true
+  - enabled: false
     content:
       - ":)"
     content-hover: []
@@ -204,7 +204,7 @@ swappers:
     requirements:
       enabled: false
       use-permission: ""
-  - enabled: true
+  - enabled: false
     content:
       - ":|"
     content-hover: []

@@ -17,21 +17,32 @@
 #       symbol: "!"
 #       command: "example"
 #
-#     Here you can specify the message format.
+#     Here you can specify multiple formats that will be used by the permission.
+#     Format allows you to specify the design of the final message that will be shown
+#     to the players. You can use PlaceholderAPI placeholders, MiniMessage formatting and
+#     internal {playerName}/{message} placeholders.
 #     formats:
-#       Format allows you to specify the design of the final message that will be shown
-#       to the players. You can use PlaceholderAPI placeholders, MiniMessage formatting and
-#       internal {playerName}/{message} placeholders.
-#       format: "<red>{playerName}: <white>{message}"
-#       This option allows you to specify the permission that the player must have to use this
-#       format.
-#       permission: "whereareiam.is.the.best"
+#       - format: <gold><bold><globalChat>G</globalChat></bold></gold> <dark_gray>| <gray><click:run_command:/tpa {playerName><playerInformation>{playerName}</playerInformation></click>: <white><messageInformation>{message}</messageInformation>
+#         permission: ""
+#         sound: null
 #
-#     In this list, you can specify what and how to show players when they hover their mouse
-#     over the message format. You can use PlaceholderAPI placeholders and MiniMessage formatting
-#     hover-format:
-#       - "<green>Oh look at that!"
-#       - "<red>Oh look at that!"
+#     This setting allows you to determine whether swapper can be used or not.
+#     enable-swapper: true
+#
+#     Mentions section, controls how player mentions work in this chat.
+#     mentions:
+#       Option to specify whether to enable or disable mentioning.
+#       enabled: true
+#       This option allows the sender of a message to mention themselves.
+#       mention-self: false
+#       This option allows the sender of a message to mention all players.
+#       mention-all: false
+#       This option allows the sender of a message to mention nearby players.
+#       mention-nearby: false
+#       Limit on how many players can be mentioned at once in this chat, does not apply to @all mentions.
+#       max-mentions: 5
+#       Radius for @nearby mention
+#       radius: 100
 #
 #     Here you can specify the requirements for using this chat.
 #     requirements:
