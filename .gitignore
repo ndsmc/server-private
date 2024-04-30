@@ -16,7 +16,6 @@
 /ops.json
 /permissions.yml
 /.vscode
-/.mc-paper.*.env
 /.console_history
 /plugins/update
 *.gz
@@ -25,3 +24,5 @@
 *.tmp
 *.db
 *.log
+*.env
+*.bak
