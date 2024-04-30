@@ -1,0 +1,138 @@
+enabled:
+  # Показывать владельца предметов при их создании/находке.
+  created-by:
+    pickaxe: true
+    sword: true
+    shovel: true
+    axe: true
+    hoe: true
+    shears: true
+    bow: true
+    armor: true
+  # Показывать время создания предмета.
+  created-date:
+    pickaxe: true
+    sword: true
+    shovel: true
+    axe: true
+    hoe: true
+    shears: true
+    bow: true
+    armor: true
+  # Показывать "Поймано игроком <player>"
+  fished-tag:
+    pickaxe: true
+    sword: true
+    shovel: true
+    axe: true
+    hoe: true
+    shears: true
+    bow: true
+    armor: true
+  # Показывать "Найдено игроком <player>"
+  looted-tag:
+    pickaxe: true
+    sword: true
+    shovel: true
+    axe: true
+    hoe: true
+    shears: true
+    bow: true
+    armor: true
+  # Показывать "Торговля игроком <player>"
+  traded-tag:
+    pickaxe: true
+    sword: true
+    shovel: true
+    axe: true
+    hoe: true
+    shears: true
+    bow: true
+    armor: true
+  player-kills:
+    sword: true
+    axe: true
+    trident: true
+    bow: true
+  mob-kills:
+    sword: true
+    axe: true
+    trident: true
+    bow: true
+  blocks-mined:
+    pickaxe: true
+    shovel: true
+    axe: true
+    hoe: true
+    shears: true
+  # Показывать "Создано игроком <player>"
+  spawned-in:
+    pickaxe: true
+    sword: true
+    shovel: true
+    axe: true
+    hoe: true
+    shears: true
+    bow: true
+    armor: true
+  fish-caught: true
+  sheep-sheared: true
+  armor-damage: true
+  dropped-by: true
+  elytra-tag: true
+  arrows-shot: true
+
+messages:
+  created:
+    created-by: "&7Создано игроком: &8{player}"
+    created-on: "&7Создано: &8{date}"
+  fished:
+    caught-by: "&7Поймано игроком: &8{player}"
+    caught-on: "&7Поймано: &8{date}"
+    fish-caught: "&7Поймано рыб: &8{fish}"
+  looted:
+    looted-by: "&7Ограблено игроком: &8{player}"
+    looted-on: "&7Ограблено: &8{date}"
+    found-by: "&7Найдено игроком: &8{player}"
+    found-on: "&7Найдено: &8{date}"
+  traded:
+    traded-by: "&7Торговля игроком: &8{player}"
+    traded-on: "&7Торговля: &8{date}"
+  kills:
+    mob: "&7Убито мобов: &8{kills}"
+    player: "&7Убито игроков: &8{kills}"
+  spawned-in:
+    spawned-by: "&7Создано игроком: &8{player}"
+    spawned-on: "&7Создано: &8{date}"
+  blocks-mined: "&7Добыто блоков: &8{blocks}"
+  crops-harvested: "&7Собрано урожая: &8{crops}"
+  sheep-sheared: "&7Острижено овец: &8{sheep}"
+  dropped-by: "&7Выброшено игроком: &8{name}" # name будет именем игрока/моба
+  damage-taken: "&7Получено урона: &8{damage}"
+  arrows-shot: "&7Выстрелено стрел: &8{arrows}"
+  # Показывать это сообщение, если игрок сдвинет кликом мыши предметы в торговле/изготовлении.
+  # Не совсем просто получить каждый отдельный предмет, который изготавливается.
+  # Тег будет добавлен только к первому предмету. Если вы не хотите видеть это сообщение, просто замените оба на "".
+  shift-click-warning:
+    crafting: "&cИзготовление предметов кликом мыши не полностью применяет теги к каждому предмету. Это ограничение с API Bukkit."
+    trading: "&cТорговля предметами кликом мыши не полностью применяет теги к каждому предмету. Это ограничение с API Bukkit."
+
+# Изменение формата по умолчанию для дат.
+# См.: https://www.digitalocean.com/community/tutorials/java-simpledateformat-java-date-format
+# Пример: "dd/MM/yyyy"
+date-format: "dd/MM/yyyy"
+
+# Изменение форматирования чисел.
+# Вероятно, вам не нужно это трогать.
+number-formats:
+  comma-separator: ","
+  decimal-separator: "."
+  comma-format: "#,###"
+  decimal-format: "#,###.00"
+
+# Когда создаётся любой инструмент, будет сгенерирован хэш для предмета.
+# Этот хэш не находится в лоре предмета, а только в хранимых данных NBT.
+# В настоящее время это не имеет никакого использования, но может быть использовано для будущих функций для обнаружения дюпов.
+generate-hash-for-items: true
+
+config-version: 6
